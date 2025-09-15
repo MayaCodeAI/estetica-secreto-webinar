@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Users, Award, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import drJohnnyImage from "@/assets/dr-johnny-secco.png";
-
 export const HeroSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -15,23 +14,19 @@ export const HeroSection = () => {
     phone: ""
   });
   const [isFormOpen, setIsFormOpen] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", formData);
     setIsFormOpen(false);
   };
-
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
-
-  return (
-    <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
+  return <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
       
@@ -75,10 +70,7 @@ export const HeroSection = () => {
             <div className="space-y-4">
               <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
                 <DialogTrigger asChild>
-                  <Button 
-                    size="lg" 
-                    className="w-full bg-gradient-gold hover:opacity-90 text-accent-gold-foreground font-bold text-lg py-6 shadow-gold border-2 border-accent-gold/20"
-                  >
+                  <Button size="lg" className="w-full bg-gradient-gold hover:opacity-90 text-accent-gold-foreground font-bold text-lg py-6 shadow-gold border-2 border-accent-gold/20">
                     🎯 GARANTIR MINHA VAGA GRATUITA
                   </Button>
                 </DialogTrigger>
@@ -100,52 +92,24 @@ export const HeroSection = () => {
                         <Label htmlFor="modal-name" className="text-sm font-medium">
                           Nome completo
                         </Label>
-                        <Input
-                          id="modal-name"
-                          type="text"
-                          placeholder="Digite seu nome completo"
-                          value={formData.name}
-                          onChange={(e) => handleInputChange("name", e.target.value)}
-                          className="h-12 text-base"
-                          required
-                        />
+                        <Input id="modal-name" type="text" placeholder="Digite seu nome completo" value={formData.name} onChange={e => handleInputChange("name", e.target.value)} className="h-12 text-base" required />
                       </div>
 
                       <div className="space-y-2">
                         <Label htmlFor="modal-email" className="text-sm font-medium">
                           E-mail
                         </Label>
-                        <Input
-                          id="modal-email"
-                          type="email"
-                          placeholder="Digite seu melhor e-mail"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange("email", e.target.value)}
-                          className="h-12 text-base"
-                          required
-                        />
+                        <Input id="modal-email" type="email" placeholder="Digite seu melhor e-mail" value={formData.email} onChange={e => handleInputChange("email", e.target.value)} className="h-12 text-base" required />
                       </div>
 
                       <div className="space-y-2">
                         <Label htmlFor="modal-phone" className="text-sm font-medium">
                           Telefone
                         </Label>
-                        <Input
-                          id="modal-phone"
-                          type="tel"
-                          placeholder="(00) 00000-0000"
-                          value={formData.phone}
-                          onChange={(e) => handleInputChange("phone", e.target.value)}
-                          className="h-12 text-base"
-                          required
-                        />
+                        <Input id="modal-phone" type="tel" placeholder="(00) 00000-0000" value={formData.phone} onChange={e => handleInputChange("phone", e.target.value)} className="h-12 text-base" required />
                       </div>
 
-                      <Button 
-                        type="submit" 
-                        size="lg" 
-                        className="w-full bg-gradient-medical hover:opacity-90 font-bold text-lg py-6 shadow-medical"
-                      >
+                      <Button type="submit" size="lg" className="w-full bg-gradient-medical hover:opacity-90 font-bold text-lg py-6 shadow-medical">
                         CONFIRMAR INSCRIÇÃO
                       </Button>
                     </form>
@@ -160,11 +124,7 @@ export const HeroSection = () => {
             <div className="relative">
               {/* Doctor Image */}
               <div className="relative group">
-                <img 
-                  src={drJohnnyImage} 
-                  alt="Dr. Johnny Secco - Especialista em Estética e Gestão de Clínicas" 
-                  className="w-full max-w-sm mx-auto lg:max-w-md object-cover rounded-2xl shadow-image border-4 border-white/20 group-hover:scale-105 transition-transform duration-300"
-                />
+                <img src={drJohnnyImage} alt="Dr. Johnny Secco - Especialista em Estética e Gestão de Clínicas" className="w-full max-w-sm mx-auto lg:max-w-md object-cover rounded-2xl shadow-image border-4 border-white/20 group-hover:scale-105 transition-transform duration-300" />
                 
                 {/* Achievement badges */}
                 <div className="absolute -top-4 -right-4 lg:-right-8">
@@ -186,12 +146,7 @@ export const HeroSection = () => {
               <div className="hidden lg:block mt-6">
                 <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
                   <DialogTrigger asChild>
-                    <Button 
-                      size="lg" 
-                      className="w-full bg-white/90 text-primary hover:bg-white font-bold text-lg py-6 shadow-form"
-                    >
-                      PARTICIPAR DO WORKSHOP
-                    </Button>
+                    
                   </DialogTrigger>
                 </Dialog>
               </div>
@@ -199,6 +154,5 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
