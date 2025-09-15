@@ -35,7 +35,7 @@ export const LearningSection = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -49,7 +49,7 @@ export const LearningSection = () => {
           {/* Learning Points */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {learningPoints.map((point, index) => (
-              <Card key={index} className="border-border hover:shadow-medical transition-all duration-300 hover:border-primary/30">
+              <Card key={index} className="border-primary/20 hover:shadow-medical hover:shadow-primary/20 transition-all duration-300 hover:border-primary/40 bg-background/50 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="flex gap-4">
                     <div className="flex-shrink-0">
@@ -67,7 +67,7 @@ export const LearningSection = () => {
           </div>
 
           {/* Call to Action */}
-          <Card className="bg-gradient-medical text-white border-0 shadow-form">
+          <Card className="bg-gradient-medical text-white border-0 shadow-medical">
             <CardContent className="p-8 text-center">
               <div className="space-y-6">
                 <h3 className="text-2xl md:text-3xl font-bold">

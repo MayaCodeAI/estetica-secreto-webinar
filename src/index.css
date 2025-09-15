@@ -6,75 +6,69 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 225 15% 20%;
+    /* Dark theme colors - Primary design */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 225 15% 20%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 225 15% 20%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Medical blue primary color */
-    --primary: 242 47% 58%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 242 47% 68%;
-    --primary-dark: 242 47% 48%;
+    /* Purple primary color */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 262 73% 68%;
+    --primary-dark: 262 93% 48%;
 
-    /* Elegant secondary colors */
-    --secondary: 210 15% 96%;
-    --secondary-foreground: 225 15% 25%;
+    /* Dark secondary colors */
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 15% 96%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 315 25% 95%;
-    --accent-foreground: 315 40% 25%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 98%;
     
-    /* Premium gold accent for highlights */
-    --accent-gold: 45 96% 64%;
-    --accent-gold-foreground: 45 96% 20%;
+    /* Purple accent for highlights */
+    --accent-gold: 262 83% 58%;
+    --accent-gold-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 210 15% 90%;
-    --input: 210 15% 95%;
-    --ring: 242 47% 58%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 262 83% 58%;
 
-    /* Medical gradient */
-    --gradient-medical: linear-gradient(135deg, hsl(242 47% 58%), hsl(315 30% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(242 47% 58%) 0%, hsl(242 60% 70%) 50%, hsl(315 40% 75%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 96% 64%), hsl(45 86% 55%));
-    --gradient-gold-text: linear-gradient(135deg, hsl(45 96% 64%), hsl(43 89% 58%), hsl(41 100% 52%));
+    /* Purple gradients */
+    --gradient-medical: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 93% 48%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(262 20% 8%) 50%, hsl(0 0% 3%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 73% 68%));
+    --gradient-gold-text: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 73% 68%));
     
-    /* Professional shadows */
-    --shadow-medical: 0 10px 25px -5px hsl(242 47% 58% / 0.1);
-    --shadow-form: 0 20px 40px -10px hsl(242 47% 58% / 0.15);
-    --shadow-gold: 0 8px 32px -8px hsl(45 96% 64% / 0.3);
-    --shadow-image: 0 20px 40px -10px hsl(242 47% 58% / 0.2);
+    /* Dark shadows with purple accent */
+    --shadow-medical: 0 10px 30px -10px hsl(262 83% 58% / 0.3);
+    --shadow-form: 0 8px 25px -8px hsl(0 0% 0% / 0.8);
+    --shadow-gold: 0 8px 25px -8px hsl(262 83% 58% / 0.4);
+    --shadow-image: 0 15px 35px -10px hsl(0 0% 0% / 0.6);
     
     /* Typography */
     --font-heading: 'Inter', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 262 83% 58%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 262 83% 58%;
   }
 
   .dark {
