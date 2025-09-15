@@ -40,6 +40,8 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          gold: "hsl(var(--accent-gold))",
+          "gold-foreground": "hsl(var(--accent-gold-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -63,10 +65,14 @@ export default {
       backgroundImage: {
         'gradient-medical': 'var(--gradient-medical)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-gold-text': 'var(--gradient-gold-text)',
       },
       boxShadow: {
         'medical': 'var(--shadow-medical)',
         'form': 'var(--shadow-form)',
+        'gold': 'var(--shadow-gold)',
+        'image': 'var(--shadow-image)',
       },
       fontFamily: {
         'heading': 'var(--font-heading)',

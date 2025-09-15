@@ -30,6 +30,10 @@
 
     --accent: 315 25% 95%;
     --accent-foreground: 315 40% 25%;
+    
+    /* Premium gold accent for highlights */
+    --accent-gold: 45 96% 64%;
+    --accent-gold-foreground: 45 96% 20%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -41,10 +45,14 @@
     /* Medical gradient */
     --gradient-medical: linear-gradient(135deg, hsl(242 47% 58%), hsl(315 30% 65%));
     --gradient-hero: linear-gradient(135deg, hsl(242 47% 58%) 0%, hsl(242 60% 70%) 50%, hsl(315 40% 75%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 96% 64%), hsl(45 86% 55%));
+    --gradient-gold-text: linear-gradient(135deg, hsl(45 96% 64%), hsl(43 89% 58%), hsl(41 100% 52%));
     
     /* Professional shadows */
     --shadow-medical: 0 10px 25px -5px hsl(242 47% 58% / 0.1);
     --shadow-form: 0 20px 40px -10px hsl(242 47% 58% / 0.15);
+    --shadow-gold: 0 8px 32px -8px hsl(45 96% 64% / 0.3);
+    --shadow-image: 0 20px 40px -10px hsl(242 47% 58% / 0.2);
     
     /* Typography */
     --font-heading: 'Inter', system-ui, sans-serif;
@@ -102,6 +110,8 @@
 
     --gradient-medical: linear-gradient(135deg, hsl(242 60% 70%), hsl(315 40% 65%));
     --gradient-hero: linear-gradient(135deg, hsl(242 60% 70%) 0%, hsl(242 70% 80%) 50%, hsl(315 50% 75%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 86% 74%), hsl(45 76% 65%));
+    --gradient-gold-text: linear-gradient(135deg, hsl(45 86% 74%), hsl(43 79% 68%), hsl(41 90% 62%));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
