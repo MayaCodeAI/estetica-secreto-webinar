@@ -23,9 +23,8 @@ export const HeroSection = () => {
           {/* Mobile Content */}
           <div className="space-y-6 text-center">
             <h1 className="text-3xl sm:text-4xl font-bold leading-tight text-white">
-              Workshop Gratuito:<br />
-              <span className="text-purple-400">Protocolo Intensivo</span><br />
-              de Harmonização Facial<br />
+              <span className="text-purple-400">SEGREDOS COMERCIAIS</span><br />
+              da Estética<br />
               com <span className="text-purple-400">Dr. Johnny Secco</span>
             </h1>
             
@@ -67,9 +66,8 @@ export const HeroSection = () => {
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-6">
               <h1 className="text-5xl xl:text-6xl font-bold leading-tight text-white">
-                Workshop Gratuito:<br />
                 <span className="text-purple-400">SEGREDOS COMERCIAIS</span><br />
-                de Harmonização Facial<br />
+                da Estética<br />
                 com <span className="text-purple-400">Dr. Johnny Secco</span>
               </h1>
               
