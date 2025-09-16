@@ -101,9 +101,7 @@ Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás
               </div>
             </div>
 
-            <Button onClick={openModal} className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25">
-              GARANTIR MINHA VAGA GRATUITA
-            </Button>
+            <Button onClick={openModal} className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25">CADASTRE-SE GRATUITAMENTE</Button>
           </div>
 
           {/* Right Section - Image */}

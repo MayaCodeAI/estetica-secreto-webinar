@@ -45,7 +45,7 @@ Dr. Johnny une prática clínica, visão estratégica e espírito empreendedor p
                 <div className="flex items-center space-x-3">
                   <Users className="h-6 w-6 text-purple-400" />
                   <div>
-                    <p className="text-white font-semibold">+10.000 Procedimentos</p>
+                    <p className="text-white font-semibold">+20.000 Procedimentos</p>
                     <p className="text-white/70 text-sm">Realizados com sucesso</p>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ Dr. Johnny une prática clínica, visão estratégica e espírito empreendedor p
               <p className="text-lg text-white/90">
                 Esta é sua chance única de aprender diretamente com Dr. Johnny Secco
               </p>
-              <Button onClick={openModal} className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25">
+              <Button onClick={openModal} className="font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25 text-zinc-950 bg-slate-50">
                 PARTICIPAR DO WORKSHOP
               </Button>
             </div>
