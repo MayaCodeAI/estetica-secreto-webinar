@@ -32,9 +32,7 @@ export const LearningSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               O que você vai <span className="text-purple-400">aprenderá neste Workshop:</span>
             </h2>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Um workshop completo com as técnicas mais avançadas de harmonização facial
-            </p>
+            
           </div>
 
           {/* Learning Points Grid */}

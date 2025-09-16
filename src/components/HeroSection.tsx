@@ -28,10 +28,10 @@ export const HeroSection = () => {
               com <span className="text-purple-400">Dr. Johnny Secco</span>
             </h1>
             
-            <p className="text-lg text-white/90 leading-relaxed">
-              Descubra as técnicas mais avançadas de preenchimento facial e toxina botulínica 
-              em um workshop intensivo e prático.
-            </p>
+            <p className="text-lg text-white/90 leading-relaxed">O que as melhores clínicas estão fazendo para encantar, converter e fidelizar pacientes todos os dias!
+
+
+Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.</p>
             
             {/* Event Details - Mobile */}
             <div className="grid grid-cols-2 gap-4">
@@ -40,8 +40,8 @@ export const HeroSection = () => {
                   <Calendar className="h-5 w-5 text-purple-400" />
                   <h3 className="text-sm font-semibold text-white">Data</h3>
                 </div>
-                <p className="text-lg font-bold text-purple-400">15 de Nov</p>
-                <p className="text-xs text-white/70">2024</p>
+                <p className="text-lg font-bold text-purple-400">07 de Out</p>
+                <p className="text-xs text-white/70">Terça-feira</p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
@@ -49,7 +49,7 @@ export const HeroSection = () => {
                   <Clock className="h-5 w-5 text-purple-400" />
                   <h3 className="text-sm font-semibold text-white">Horário</h3>
                 </div>
-                <p className="text-lg font-bold text-purple-400">19h-22h</p>
+                <p className="text-lg font-bold text-purple-400">20:00h</p>
                 <p className="text-xs text-white/70">Brasília</p>
               </div>
             </div>
