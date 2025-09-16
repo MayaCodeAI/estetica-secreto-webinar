@@ -1,203 +1,135 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, Users, Award, TrendingUp } from "lucide-react";
-import { useState } from "react";
-import drJohnnyImage from "@/assets/dr-johnny-secco.png";
+import { MapPin, Calendar, Clock } from "lucide-react";
+import { useFormModal } from "@/hooks/useFormModal";
+import teamPhoto from "@/assets/team-photo.png";
 
 export const HeroSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-  };
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
-  };
+  const { openModal } = useFormModal();
 
   return (
-    <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5"></div>
+    <section className="relative min-h-screen bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
+      {/* Background overlay with pattern */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/90 to-purple-900/10" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
-      <div className="container mx-auto px-4 py-8 lg:py-12 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start min-h-screen">
+      <div className="container mx-auto px-6 py-8 relative z-10">
+        {/* Mobile Layout */}
+        <div className="lg:hidden space-y-8">
+          {/* Mobile Image - Top */}
+          <div className="flex justify-center pt-4">
+            <img
+              src={teamPhoto}
+              alt="Equipe médica especializada"
+              className="w-full max-w-sm rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20"
+            />
+          </div>
           
-          {/* Content - 7 columns on large screens */}
-          <div className="lg:col-span-7 space-y-8 order-2 lg:order-1">
+          {/* Mobile Content */}
+          <div className="space-y-6 text-center">
+            <h1 className="text-3xl sm:text-4xl font-bold leading-tight text-white">
+              Workshop Gratuito:<br />
+              <span className="text-purple-400">Protocolo Intensivo</span><br />
+              de Harmonização Facial<br />
+              com <span className="text-purple-400">Dr. Johnny Secco</span>
+            </h1>
+            
+            <p className="text-lg text-white/90 leading-relaxed">
+              Descubra as técnicas mais avançadas de preenchimento facial e toxina botulínica 
+              em um workshop intensivo e prático.
+            </p>
+            
+            {/* Event Details - Mobile */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <Calendar className="h-5 w-5 text-purple-400" />
+                  <h3 className="text-sm font-semibold text-white">Data</h3>
+                </div>
+                <p className="text-lg font-bold text-purple-400">15 de Nov</p>
+                <p className="text-xs text-white/70">2024</p>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <Clock className="h-5 w-5 text-purple-400" />
+                  <h3 className="text-sm font-semibold text-white">Horário</h3>
+                </div>
+                <p className="text-lg font-bold text-purple-400">19h-22h</p>
+                <p className="text-xs text-white/70">Brasília</p>
+              </div>
+            </div>
+            
+            <Button
+              onClick={openModal}
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 text-lg shadow-lg shadow-purple-500/25"
+            >
+              GARANTIR MINHA VAGA GRATUITA
+            </Button>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:grid lg:grid-cols-12 gap-16 min-h-screen items-center">
+          {/* Content Section */}
+          <div className="lg:col-span-7 space-y-8">
             <div className="space-y-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
-                SEGREDOS COMERCIAIS DA ESTÉTICA COM{" "}
-                <span className="bg-gradient-gold-text bg-clip-text text-transparent font-extrabold">
-                  DR. JOHNNY SECCO
-                </span>
+              <h1 className="text-5xl xl:text-6xl font-bold leading-tight text-white">
+                Workshop Gratuito:<br />
+                <span className="text-purple-400">Protocolo Intensivo</span><br />
+                de Harmonização Facial<br />
+                com <span className="text-purple-400">Dr. Johnny Secco</span>
               </h1>
               
-              <p className="text-lg md:text-xl lg:text-2xl text-foreground/90 leading-relaxed font-medium">
-                O que as <span className="text-primary font-bold">melhores clínicas</span> estão fazendo para encantar, converter e 
-                fidelizar pacientes todos os dias!
+              <p className="text-2xl text-white/90 leading-relaxed">
+                Descubra as técnicas mais avançadas de preenchimento facial e toxina botulínica 
+                em um workshop intensivo e prático.
               </p>
               
-              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-                Um <span className="text-primary font-semibold">workshop ao vivo</span>, com <span className="text-primary font-semibold">técnicas comerciais</span> reveladas por quem está 
-                por trás delas e responsável por mais de <span className="text-primary font-bold">20.000 vendas</span> de procedimentos 
-                estéticos no Brasil.
+              <p className="text-lg text-white/80 leading-relaxed">
+                Aprenda com um dos maiores especialistas em harmonização facial do Brasil. 
+                Teoria, prática e todas as técnicas que você precisa dominar para se destacar 
+                no mercado da estética.
               </p>
             </div>
 
-            {/* Event Info */}
-            <div className="flex flex-wrap gap-4 text-foreground">
-              <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border rounded-lg px-4 py-2">
-                <Calendar className="w-5 h-5 text-primary" />
-                <span className="font-semibold">07 de Outubro</span>
+            {/* Event Details */}
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6">
+                <div className="flex items-center space-x-3 mb-3">
+                  <Calendar className="h-6 w-6 text-purple-400" />
+                  <h3 className="text-lg font-semibold text-white">Data</h3>
+                </div>
+                <p className="text-2xl font-bold text-purple-400">15 de Novembro</p>
+                <p className="text-white/70">2024 • Quinta-feira</p>
               </div>
-              <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-border rounded-lg px-4 py-2">
-                <Clock className="w-5 h-5 text-primary" />
-                <span className="font-semibold">20:00h</span>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6">
+                <div className="flex items-center space-x-3 mb-3">
+                  <Clock className="h-6 w-6 text-purple-400" />
+                  <h3 className="text-lg font-semibold text-white">Horário</h3>
+                </div>
+                <p className="text-2xl font-bold text-purple-400">19h às 22h</p>
+                <p className="text-white/70">Horário de Brasília</p>
               </div>
             </div>
 
-            {/* Doctor Image - Mobile Only */}
-            <div className="lg:hidden">
-              <div className="relative group w-48 mx-auto">
-                <img 
-                  src={drJohnnyImage} 
-                  alt="Dr. Johnny Secco - Especialista em Estética e Gestão de Clínicas" 
-                  className="w-full object-cover rounded-2xl shadow-image border-2 border-primary/30"
-                />
-                
-                {/* Achievement badges - Mobile */}
-                <div className="absolute -top-2 -right-2">
-                  <Badge className="bg-gradient-gold text-accent-gold-foreground font-bold text-xs">
-                    <Award className="w-3 h-3 mr-1" />
-                    26+ Clínicas
-                  </Badge>
-                </div>
-                
-                <div className="absolute -bottom-2 -left-2">
-                  <Badge className="bg-gradient-gold text-accent-gold-foreground font-bold text-xs">
-                    <TrendingUp className="w-3 h-3 mr-1" />
-                    +20k Vendas
-                  </Badge>
-                </div>
-              </div>
-            </div>
+            <Button
+              onClick={openModal}
+              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25"
+            >
+              GARANTIR MINHA VAGA GRATUITA
+            </Button>
           </div>
 
-          {/* Registration Form - 5 columns on large screens */}
-          <div className="lg:col-span-5 order-1 lg:order-2">
-            <div className="lg:sticky lg:top-8">
-              {/* Doctor Image - Desktop Only */}
-              <div className="hidden lg:block mb-6">
-                <div className="relative group">
-                  <img 
-                    src={drJohnnyImage} 
-                    alt="Dr. Johnny Secco - Especialista em Estética e Gestão de Clínicas" 
-                    className="w-full max-w-sm mx-auto object-cover rounded-2xl shadow-image border-2 border-primary/30 group-hover:scale-105 transition-transform duration-300"
-                  />
-                  
-                  {/* Achievement badges - Desktop */}
-                  <div className="absolute -top-4 -right-4">
-                    <Badge className="bg-gradient-gold text-accent-gold-foreground font-bold shadow-gold">
-                      <Award className="w-4 h-4 mr-1" />
-                      26+ Clínicas
-                    </Badge>
-                  </div>
-                  
-                  <div className="absolute -bottom-4 -left-4">
-                    <Badge className="bg-gradient-gold text-accent-gold-foreground font-bold shadow-gold">
-                      <TrendingUp className="w-4 h-4 mr-1" />
-                      +20.000 Vendas
-                    </Badge>
-                  </div>
-                </div>
-              </div>
-
-              {/* Registration Form */}
-              <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-form" id="registration-form">
-                <CardContent className="p-6 space-y-6">
-                  <div className="text-center space-y-2">
-                    <h2 className="text-xl lg:text-2xl font-bold text-foreground">
-                      Garantir Minha Vaga
-                    </h2>
-                    <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                      <Users className="w-4 h-4 text-primary" />
-                      <span className="text-sm">Vagas limitadas</span>
-                    </div>
-                  </div>
-
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="text-sm font-medium text-foreground">
-                        Nome completo
-                      </Label>
-                      <Input 
-                        id="name" 
-                        type="text" 
-                        placeholder="Digite seu nome completo" 
-                        value={formData.name} 
-                        onChange={e => handleInputChange("name", e.target.value)} 
-                        className="h-12 text-base bg-background/50 border-primary/30 focus:border-primary" 
-                        required 
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-sm font-medium text-foreground">
-                        E-mail
-                      </Label>
-                      <Input 
-                        id="email" 
-                        type="email" 
-                        placeholder="Digite seu melhor e-mail" 
-                        value={formData.email} 
-                        onChange={e => handleInputChange("email", e.target.value)} 
-                        className="h-12 text-base bg-background/50 border-primary/30 focus:border-primary" 
-                        required 
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="phone" className="text-sm font-medium text-foreground">
-                        Telefone
-                      </Label>
-                      <Input 
-                        id="phone" 
-                        type="tel" 
-                        placeholder="(00) 00000-0000" 
-                        value={formData.phone} 
-                        onChange={e => handleInputChange("phone", e.target.value)} 
-                        className="h-12 text-base bg-background/50 border-primary/30 focus:border-primary" 
-                        required 
-                      />
-                    </div>
-
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full bg-gradient-medical hover:opacity-90 font-bold text-lg py-6 shadow-medical"
-                    >
-                      🎯 CONFIRMAR INSCRIÇÃO GRATUITA
-                    </Button>
-
-                    <p className="text-xs text-center text-muted-foreground">
-                      Seus dados estão protegidos e não serão compartilhados.
-                    </p>
-                  </form>
-                </CardContent>
-              </Card>
+          {/* Right Section - Image */}
+          <div className="lg:col-span-5">
+            <div className="text-center">
+              <img
+                src={teamPhoto}
+                alt="Equipe médica especializada"
+                className="w-full max-w-lg rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20"
+              />
             </div>
           </div>
         </div>

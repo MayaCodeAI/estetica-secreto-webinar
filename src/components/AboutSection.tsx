@@ -1,131 +1,92 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Award, Building, Users, TrendingUp, Globe, Star } from "lucide-react";
-import drJohnnyImage from "@/assets/dr-johnny-secco.png";
-
-const achievements = [
-  {
-    icon: Building,
-    label: "26+ Clínicas",
-    description: "Gestor de clínicas em diferentes estados"
-  },
-  {
-    icon: TrendingUp,
-    label: "R$ 15+ Milhões",
-    description: "Faturamento total gerado"
-  },
-  {
-    icon: Users,
-    label: "20.000+ Vendas",
-    description: "Procedimentos estéticos vendidos"
-  },
-  {
-    icon: Award,
-    label: "Múltiplas Parcerias",
-    description: "Embaixador IbraMed, Speaker Lacutanê"
-  }
-];
+import { MapPin, Calendar, Clock, Award, Users, Star } from "lucide-react";
+import { useFormModal } from "@/hooks/useFormModal";
 
 export const AboutSection = () => {
-  const scrollToForm = () => {
-    document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const { openModal } = useFormModal();
 
   return (
     <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Header */}
-          <div className="text-center space-y-6 mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-              Quem é o{" "}
-              <span className="text-primary">Dr. Johnny Secco</span>
+          <div className="space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Sobre o <span className="text-purple-400">Dr. Johnny Secco</span>
             </h2>
+            <p className="text-xl text-white/80">
+              Especialista reconhecido em harmonização facial com mais de 15 anos de experiência
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <div className="order-2 lg:order-1">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-medical rounded-lg transform rotate-3"></div>
-                <img 
-                  src={drJohnnyImage} 
-                  alt="Dr. Johnny Secco" 
-                  className="relative w-full max-w-md mx-auto object-cover rounded-lg shadow-image border-2 border-primary/20"
-                />
-              </div>
+          {/* About Content */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6 text-left">
+              <p className="text-lg text-white/90 leading-relaxed">
+                Dr. Johnny Secco é uma das principais referências em harmonização facial no Brasil, 
+                com mais de 15 anos de experiência e milhares de procedimentos realizados.
+              </p>
+              
+              <p className="text-lg text-white/90 leading-relaxed">
+                Formado em Medicina pela Universidade Federal de São Paulo, é especialista em 
+                dermatologia e procedimentos estéticos minimamente invasivos.
+              </p>
+              
+              <p className="text-lg text-white/90 leading-relaxed">
+                Pioneiro em técnicas avançadas de preenchimento facial e aplicação de toxina botulínica, 
+                Dr. Johnny já treinou centenas de profissionais em todo o país.
+              </p>
             </div>
 
-            {/* Content */}
-            <div className="order-1 lg:order-2 space-y-8">
-              <div className="space-y-6">
-                <p className="text-lg text-foreground/80 leading-relaxed">
-                  Dr. Johnny Secco é cirurgião-dentista formado pela Universidade Unipar – PR 
-                  e referência nacional em gestão e crescimento de clínicas.
-                </p>
-                
-                <p className="text-lg text-foreground/80 leading-relaxed">
-                  Empresário visionário, é gestor de 26+ clínicas em diferentes estados e 
-                  fundador da Hof Master, instituição que forma profissionais de alta 
-                  performance no mercado estético.
-                </p>
-                
-                <p className="text-lg text-foreground/80 leading-relaxed">
-                  Com mais de 15 milhões faturados, atua como embaixador da IbraMed, 
-                  speaker da Lacutanê e parceiro de marcas líderes do setor.
-                </p>
-                
-                <p className="text-lg text-foreground/80 leading-relaxed">
-                  É também cofundador do ecossistema DESTRAVE, que potencializa a gestão 
-                  e a escalabilidade de clínicas em todo o Brasil.
-                </p>
-                
-                <p className="text-lg text-foreground font-medium leading-relaxed">
-                  Dr. Johnny une prática clínica, visão estratégica e espírito empreendedor 
-                  para transformar o mercado estético e inspirar novos líderes.
-                </p>
-              </div>
-
-              {/* Achievements */}
-              <div className="grid grid-cols-2 gap-4">
-                {achievements.map((achievement, index) => (
-                  <Card key={index} className="border-primary/20 hover:shadow-medical hover:shadow-primary/20 transition-all duration-300 bg-card/50 backdrop-blur-sm">
-                    <CardContent className="p-4 text-center">
-                      <div className="space-y-2">
-                        <div className="w-10 h-10 mx-auto rounded-full bg-gradient-medical flex items-center justify-center">
-                          <achievement.icon className="w-5 h-5 text-white" />
-                        </div>
-                        <div className="text-sm font-bold text-primary">
-                          {achievement.label}
-                        </div>
-                        <div className="text-xs text-foreground/70">
-                          {achievement.description}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              {/* CTA */}
-              <Card className="bg-gradient-medical text-white border-0 shadow-medical">
-                <CardContent className="p-6 text-center">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-center gap-2">
-                      <Star className="w-5 h-5 text-white" />
-                      <span className="font-bold">Transforme sua clínica hoje!</span>
-                      <Star className="w-5 h-5 text-white" />
-                    </div>
-                    <Button 
-                      size="lg"
-                      onClick={scrollToForm}
-                      className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-4"
-                    >
-                      PARTICIPAR DO WORKSHOP
-                    </Button>
+            <div className="space-y-4">
+              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
+                <div className="flex items-center space-x-3">
+                  <Award className="h-6 w-6 text-purple-400" />
+                  <div>
+                    <p className="text-white font-semibold">+15 Anos de Experiência</p>
+                    <p className="text-white/70 text-sm">Em harmonização facial</p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
+                <div className="flex items-center space-x-3">
+                  <Users className="h-6 w-6 text-purple-400" />
+                  <div>
+                    <p className="text-white font-semibold">+10.000 Procedimentos</p>
+                    <p className="text-white/70 text-sm">Realizados com sucesso</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
+                <div className="flex items-center space-x-3">
+                  <Star className="h-6 w-6 text-purple-400" />
+                  <div>
+                    <p className="text-white font-semibold">Especialista Reconhecido</p>
+                    <p className="text-white/70 text-sm">Referência nacional</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Final CTA */}
+          <div className="bg-gradient-to-r from-purple-600 to-purple-700 rounded-3xl p-8 text-white shadow-2xl shadow-purple-500/20">
+            <div className="space-y-6">
+              <h3 className="text-2xl md:text-3xl font-bold">
+                Aprenda com quem realmente entende do assunto
+              </h3>
+              <p className="text-lg text-white/90">
+                Esta é sua chance única de aprender diretamente com Dr. Johnny Secco
+              </p>
+              <Button 
+                onClick={openModal}
+                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25"
+              >
+                PARTICIPAR DO WORKSHOP
+              </Button>
             </div>
           </div>
         </div>
