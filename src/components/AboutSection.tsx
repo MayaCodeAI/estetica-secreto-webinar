@@ -2,12 +2,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Clock, Award, Users, Star } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
-
 export const AboutSection = () => {
-  const { openModal } = useFormModal();
-
-  return (
-    <section className="py-20 bg-background">
+  const {
+    openModal
+  } = useFormModal();
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Header */}
@@ -15,28 +14,20 @@ export const AboutSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Sobre o <span className="text-purple-400">Dr. Johnny Secco</span>
             </h2>
-            <p className="text-xl text-white/80">
-              Especialista reconhecido em harmonização facial com mais de 15 anos de experiência
-            </p>
+            <p className="text-xl text-white/80">Dr. Johnny Secco é cirurgião-dentista formado pela Universidade Unipar – PR e referência nacional em gestão e crescimento de clínicas.</p>
           </div>
 
           {/* About Content */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6 text-left">
-              <p className="text-lg text-white/90 leading-relaxed">
-                Dr. Johnny Secco é uma das principais referências em harmonização facial no Brasil, 
-                com mais de 15 anos de experiência e milhares de procedimentos realizados.
-              </p>
+              <p className="text-lg text-white/90 leading-relaxed">Empresário visionário, é gestor de 26+ clínicas em diferentes estados e fundador da Hof Master, instituição que forma profissionais de alta performance no mercado estético.</p>
               
-              <p className="text-lg text-white/90 leading-relaxed">
-                Formado em Medicina pela Universidade Federal de São Paulo, é especialista em 
-                dermatologia e procedimentos estéticos minimamente invasivos.
-              </p>
+              <p className="text-lg text-white/90 leading-relaxed">Com mais de 15 milhões faturados, atua como embaixador da IbraMed, speaker da Lacutanê e parceiro de marcas líderes do setor.</p>
               
-              <p className="text-lg text-white/90 leading-relaxed">
-                Pioneiro em técnicas avançadas de preenchimento facial e aplicação de toxina botulínica, 
-                Dr. Johnny já treinou centenas de profissionais em todo o país.
-              </p>
+              <p className="text-lg text-white/90 leading-relaxed">É também cofundador do ecossistema DESTRAVE, que potencializa a gestão e a escalabilidade de clínicas em todo o Brasil.
+
+
+Dr. Johnny une prática clínica, visão estratégica e espírito empreendedor para transformar o mercado estético e inspirar novos líderes.</p>
             </div>
 
             <div className="space-y-4">
@@ -81,16 +72,12 @@ export const AboutSection = () => {
               <p className="text-lg text-white/90">
                 Esta é sua chance única de aprender diretamente com Dr. Johnny Secco
               </p>
-              <Button 
-                onClick={openModal}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25"
-              >
+              <Button onClick={openModal} className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25">
                 PARTICIPAR DO WORKSHOP
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };

@@ -56,12 +56,8 @@ export const LearningSection = () => {
           {/* Call to Action */}
           <div className="bg-gradient-to-r from-purple-600 to-purple-700 rounded-3xl p-8 text-center text-white shadow-2xl shadow-purple-500/20">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold">
-                Quer dominar as técnicas mais avançadas?
-              </h3>
-              <p className="text-xl text-white/90 max-w-2xl mx-auto">
-                Este workshop é sua oportunidade de aprender com quem realmente entende do assunto
-              </p>
+              <h3 className="text-3xl font-bold">Se sua clínica está estagnada mesmo com um bom serviço… Você tem um gargalo comercial!</h3>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto">Clique no botão abaixo para garantir sua vaga e transformar cada contato em um procedimento na sua agenda</p>
               <Button onClick={openModal} className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 text-lg shadow-lg shadow-purple-500/25">
                 PARTICIPAR DO WORKSHOP
               </Button>
