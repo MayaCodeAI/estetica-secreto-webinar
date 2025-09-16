@@ -72,7 +72,7 @@ Dr. Johnny une prática clínica, visão estratégica e espírito empreendedor p
               <p className="text-lg text-white/90">
                 Esta é sua chance única de aprender diretamente com Dr. Johnny Secco
               </p>
-              <Button onClick={openModal} className="font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25 text-zinc-950 bg-slate-50">
+              <Button onClick={openModal} className="py-4 px-8 text-lg shadow-lg shadow-purple-500/25 text-zinc-950 bg-slate-50 text-left font-bold">
                 PARTICIPAR DO WORKSHOP
               </Button>
             </div>

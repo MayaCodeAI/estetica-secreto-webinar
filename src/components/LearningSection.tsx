@@ -56,7 +56,7 @@ export const LearningSection = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold">Se sua clínica está estagnada mesmo com um bom serviço… Você tem um gargalo comercial!</h3>
               <p className="text-xl text-white/90 max-w-2xl mx-auto">Clique no botão abaixo para garantir sua vaga e transformar cada contato em um procedimento na sua agenda</p>
-              <Button onClick={openModal} className="w-full font-bold py-4 text-lg shadow-lg shadow-purple-500/25 bg-gray-50 text-gray-950">
+              <Button onClick={openModal} className="w-full font-bold py-4 shadow-lg shadow-purple-500/25 bg-gray-50 text-gray-950 text-base">
                 PARTICIPAR DO WORKSHOP
               </Button>
             </div>
