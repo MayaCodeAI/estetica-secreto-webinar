@@ -3,12 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
 import teamPhoto from "@/assets/team-photo.png";
-
 export const HeroSection = () => {
-  const { openModal } = useFormModal();
-
-  return (
-    <section className="relative min-h-screen bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
+  const {
+    openModal
+  } = useFormModal();
+  return <section className="relative min-h-screen bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
       {/* Background overlay with pattern */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/90 to-purple-900/10" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
@@ -18,11 +17,7 @@ export const HeroSection = () => {
         <div className="lg:hidden space-y-8">
           {/* Mobile Image - Top */}
           <div className="flex justify-center pt-4">
-            <img
-              src={teamPhoto}
-              alt="Equipe médica especializada"
-              className="w-full max-w-sm rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20"
-            />
+            <img src={teamPhoto} alt="Equipe médica especializada" className="w-full max-w-sm rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20" />
           </div>
           
           {/* Mobile Content */}
@@ -60,10 +55,7 @@ export const HeroSection = () => {
               </div>
             </div>
             
-            <Button
-              onClick={openModal}
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 text-lg shadow-lg shadow-purple-500/25"
-            >
+            <Button onClick={openModal} className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 text-lg shadow-lg shadow-purple-500/25">
               GARANTIR MINHA VAGA GRATUITA
             </Button>
           </div>
@@ -76,7 +68,7 @@ export const HeroSection = () => {
             <div className="space-y-6">
               <h1 className="text-5xl xl:text-6xl font-bold leading-tight text-white">
                 Workshop Gratuito:<br />
-                <span className="text-purple-400">Protocolo Intensivo</span><br />
+                <span className="text-purple-400">SEGREDOS COMERCIAIS</span><br />
                 de Harmonização Facial<br />
                 com <span className="text-purple-400">Dr. Johnny Secco</span>
               </h1>
@@ -100,8 +92,8 @@ export const HeroSection = () => {
                   <Calendar className="h-6 w-6 text-purple-400" />
                   <h3 className="text-lg font-semibold text-white">Data</h3>
                 </div>
-                <p className="text-2xl font-bold text-purple-400">15 de Novembro</p>
-                <p className="text-white/70">2024 • Quinta-feira</p>
+                <p className="text-2xl font-bold text-purple-400">07 de Outubro</p>
+                <p className="text-white/70">2025 • Terça-feira</p>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6">
@@ -109,15 +101,12 @@ export const HeroSection = () => {
                   <Clock className="h-6 w-6 text-purple-400" />
                   <h3 className="text-lg font-semibold text-white">Horário</h3>
                 </div>
-                <p className="text-2xl font-bold text-purple-400">19h às 22h</p>
+                <p className="text-2xl font-bold text-purple-400">20:00h</p>
                 <p className="text-white/70">Horário de Brasília</p>
               </div>
             </div>
 
-            <Button
-              onClick={openModal}
-              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25"
-            >
+            <Button onClick={openModal} className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25">
               GARANTIR MINHA VAGA GRATUITA
             </Button>
           </div>
@@ -125,15 +114,10 @@ export const HeroSection = () => {
           {/* Right Section - Image */}
           <div className="lg:col-span-5">
             <div className="text-center">
-              <img
-                src={teamPhoto}
-                alt="Equipe médica especializada"
-                className="w-full max-w-lg rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20"
-              />
+              <img src={teamPhoto} alt="Equipe médica especializada" className="w-full max-w-lg rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
