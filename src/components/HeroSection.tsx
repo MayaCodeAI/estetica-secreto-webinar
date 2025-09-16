@@ -22,7 +22,9 @@ export const HeroSection = () => {
           
           {/* Mobile Content */}
           <div className="space-y-6 text-center">
-            <h1 style={{ fontSize: 'clamp(1.5rem, 5vw, 3rem)' }} className="font-bold leading-[1.2] text-white">
+            <h1 style={{
+            fontSize: 'clamp(1.5rem, 5vw, 3rem)'
+          }} className="font-bold leading-[1.2] text-white">
               O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
             </h1>
             
@@ -60,7 +62,9 @@ export const HeroSection = () => {
           {/* Content Section */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-6">
-              <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }} className="font-bold leading-tight text-white">
+              <h1 style={{
+              fontSize: 'clamp(2rem, 4vw, 3rem)'
+            }} className="font-bold leading-tight text-white">
                 O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
               </h1>
               
@@ -68,11 +72,7 @@ export const HeroSection = () => {
                 Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
               </p>
               
-              <p className="text-lg text-white/70 leading-relaxed">
-                Aprenda com um dos maiores especialistas em harmonização facial do Brasil. 
-                Teoria, prática e todas as técnicas que você precisa dominar para se destacar 
-                no mercado da estética.
-              </p>
+              
             </div>
 
             {/* Event Details */}
