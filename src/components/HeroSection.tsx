@@ -71,10 +71,7 @@ export const HeroSection = () => {
                 com <span className="text-purple-400">Dr. Johnny Secco</span>
               </h1>
               
-              <p className="text-2xl text-white/90 leading-relaxed">
-                Descubra as técnicas mais avançadas de preenchimento facial e toxina botulínica 
-                em um workshop intensivo e prático.
-              </p>
+              <p className="text-2xl text-white/90 leading-relaxed">O que as melhores clínicas estão fazendo para encantar, converter e fidelizar pacientes todos os dias!</p>
               
               <p className="text-lg text-white/80 leading-relaxed">
                 Aprenda com um dos maiores especialistas em harmonização facial do Brasil. 
