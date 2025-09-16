@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
-import eventLogo from "@/assets/event-logo-clean.png";
-import drJohnnyPhoto from "@/assets/dr-johnny.png";
+import drJohnnyCombined from "@/assets/dr-johnny-combined.png";
 export const HeroSection = () => {
   const {
     openModal
@@ -14,16 +13,11 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
       <div className="container mx-auto px-5 md:px-6 lg:px-8 py-8 relative z-10">
-        {/* Event Logo - Top */}
-        <div className="flex justify-center mb-6 lg:mb-8">
-          <img src={eventLogo} alt="Segredos Comerciais da Estética com Dr. Johnny Secco" className="w-full max-w-xs md:max-w-md h-auto object-contain" />
-        </div>
-
         {/* Mobile Layout */}
         <div className="lg:hidden space-y-6">
-          {/* Mobile Image - Dr. Johnny */}
+          {/* Mobile Image - Combined Logo + Dr. Johnny */}
           <div className="flex justify-center">
-            <img src={drJohnnyPhoto} alt="Dr. Johnny Secco - Especialista em Harmonização Facial" className="w-full max-w-md rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20" />
+            <img src={drJohnnyCombined} alt="Segredos Comerciais da Estética com Dr. Johnny Secco" className="w-full max-w-lg object-cover" />
           </div>
           
           {/* Mobile Content */}
@@ -105,10 +99,10 @@ export const HeroSection = () => {
             <Button onClick={openModal} className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25 transition-all duration-200">CADASTRE-SE GRATUITAMENTE</Button>
           </div>
 
-          {/* Right Section - Dr. Johnny Image */}
+          {/* Right Section - Combined Logo + Dr. Johnny Image */}
           <div className="lg:col-span-5">
             <div className="text-center">
-              <img src={drJohnnyPhoto} alt="Dr. Johnny Secco - Especialista em Harmonização Facial" className="w-full max-w-lg rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20" />
+              <img src={drJohnnyCombined} alt="Segredos Comerciais da Estética com Dr. Johnny Secco" className="w-full max-w-xl object-cover" />
             </div>
           </div>
         </div>
