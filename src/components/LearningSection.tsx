@@ -3,22 +3,22 @@ import { Button } from "@/components/ui/button";
 import { useFormModal } from "@/hooks/useFormModal";
 const learningPoints = [{
   icon: Users,
-  text: "Técnicas avançadas de aplicação de preenchimento facial para resultados naturais"
+  text: "Como encantar o paciente já no primeiro contato, sem falar só de preço"
 }, {
   icon: Zap,
-  text: "Protocolos de toxina botulínica para harmonização completa do rosto"
+  text: "O jeito certo de apresentar seus procedimentos para o paciente querer e não só “pensar depois"
 }, {
   icon: Award,
-  text: "Anatomia facial detalhada e pontos seguros de aplicação"
+  text: "Como transformar atendimentos em vendas de verdade, mesmo com agenda cheia e pouco tempo"
 }, {
   icon: TrendingUp,
-  text: "Como avaliar e planejar tratamentos personalizados para cada paciente"
+  text: "O segredo para fazer o paciente voltar mais vezes e indicar amigos sem pedir"
 }, {
   icon: Heart,
-  text: "Gestão de complicações e como evitar resultados indesejados"
+  text: "Por que muitas clínicas perdem dinheiro sem perceber e como evitar isso no dia a dia"
 }, {
   icon: GraduationCap,
-  text: "Dicas de mercado e como se posicionar como especialista na área"
+  text: "Passos simples para ter uma agenda sempre cheia e lucrativa"
 }];
 export const LearningSection = () => {
   const {
