@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
-import teamPhoto from "@/assets/team-photo.png";
+import eventLogo from "@/assets/event-logo.png";
+import drJohnnyPhoto from "@/assets/dr-johnny.png";
 export const HeroSection = () => {
   const {
     openModal
@@ -13,25 +14,25 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
       <div className="container mx-auto px-6 py-8 relative z-10">
+        {/* Event Logo - Top */}
+        <div className="flex justify-center mb-8">
+          <img src={eventLogo} alt="Segredos Comerciais da Estética com Dr. Johnny Secco" className="w-full max-w-md h-auto object-contain" />
+        </div>
+
         {/* Mobile Layout */}
         <div className="lg:hidden space-y-8">
-          {/* Mobile Image - Top */}
-          <div className="flex justify-center pt-4">
-            <img src={teamPhoto} alt="Equipe médica especializada" className="w-full max-w-sm rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20" />
+          {/* Mobile Image - Dr. Johnny */}
+          <div className="flex justify-center">
+            <img src={drJohnnyPhoto} alt="Dr. Johnny Secco - Especialista em Harmonização Facial" className="w-full max-w-sm rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20" />
           </div>
           
           {/* Mobile Content */}
           <div className="space-y-6 text-center">
             <h1 className="text-3xl sm:text-4xl font-bold leading-tight text-white">
-              <span className="text-purple-400">SEGREDOS COMERCIAIS</span><br />
-              da Estética<br />
-              com <span className="text-purple-400">Dr. Johnny Secco</span>
+              O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
             </h1>
             
-            <p className="text-lg text-white/90 leading-relaxed">O que as melhores clínicas estão fazendo para encantar, converter e fidelizar pacientes todos os dias!
-
-
-Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.</p>
+            <p className="text-lg text-white/90 leading-relaxed">Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.</p>
             
             {/* Event Details - Mobile */}
             <div className="grid grid-cols-2 gap-4">
@@ -63,15 +64,15 @@ Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás
           {/* Content Section */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl xl:text-6xl font-bold leading-tight text-white">
-                <span className="text-purple-400">SEGREDOS COMERCIAIS</span><br />
-                da Estética<br />
-                com <span className="text-purple-400">Dr. Johnny Secco</span>
+              <h1 className="text-4xl xl:text-5xl font-bold leading-tight text-white">
+                O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
               </h1>
               
-              <p className="text-2xl text-white/90 leading-relaxed">O que as melhores clínicas estão fazendo para encantar, converter e fidelizar pacientes todos os dias!</p>
-              
               <p className="text-lg text-white/80 leading-relaxed">
+                Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
+              </p>
+              
+              <p className="text-lg text-white/70 leading-relaxed">
                 Aprenda com um dos maiores especialistas em harmonização facial do Brasil. 
                 Teoria, prática e todas as técnicas que você precisa dominar para se destacar 
                 no mercado da estética.
@@ -102,10 +103,10 @@ Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás
             <Button onClick={openModal} className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25">CADASTRE-SE GRATUITAMENTE</Button>
           </div>
 
-          {/* Right Section - Image */}
+          {/* Right Section - Dr. Johnny Image */}
           <div className="lg:col-span-5">
             <div className="text-center">
-              <img src={teamPhoto} alt="Equipe médica especializada" className="w-full max-w-lg rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20" />
+              <img src={drJohnnyPhoto} alt="Dr. Johnny Secco - Especialista em Harmonização Facial" className="w-full max-w-lg rounded-2xl object-cover shadow-2xl shadow-purple-500/20 border border-purple-500/20" />
             </div>
           </div>
         </div>
