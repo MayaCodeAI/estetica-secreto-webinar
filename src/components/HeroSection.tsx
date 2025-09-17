@@ -7,7 +7,7 @@ export const HeroSection = () => {
   const {
     openModal
   } = useFormModal();
-  return <section className="relative min-h-screen bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
+  return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
       {/* Background overlay with pattern */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/90 to-purple-900/10" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
