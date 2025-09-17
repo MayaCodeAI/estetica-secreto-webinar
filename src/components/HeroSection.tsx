@@ -12,16 +12,16 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/90 to-purple-900/10" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
-      <div className="container mx-auto px-5 md:px-6 lg:px-8 py-8 relative z-10">
+      <div className="container mx-auto px-5 md:px-6 lg:px-8 py-4 relative z-10">
         {/* Mobile Layout */}
-        <div className="lg:hidden space-y-6">
+        <div className="lg:hidden space-y-4">
           {/* Mobile Image - Combined Logo + Dr. Johnny */}
           <div className="flex justify-center">
             <img src={drJohnnyCombined} alt="Segredos Comerciais da Estética com Dr. Johnny Secco" className="w-full max-w-md object-cover" />
           </div>
           
           {/* Mobile Content */}
-          <div className="space-y-6 text-center">
+          <div className="space-y-4 text-center">
             <h1 style={{
             fontSize: 'clamp(1.5rem, 5vw, 3rem)'
           }} className="font-bold leading-[1.2] text-white">
