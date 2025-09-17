@@ -17,7 +17,7 @@ export const HeroSection = () => {
         <div className="lg:hidden space-y-6">
           {/* Mobile Image - Combined Logo + Dr. Johnny */}
           <div className="flex justify-center">
-            <img src={drJohnnyCombined} alt="Segredos Comerciais da Estética com Dr. Johnny Secco" className="w-full max-w-lg object-cover" />
+            <img src={drJohnnyCombined} alt="Segredos Comerciais da Estética com Dr. Johnny Secco" className="w-full max-w-md object-cover" />
           </div>
           
           {/* Mobile Content */}
