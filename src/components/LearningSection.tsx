@@ -1,12 +1,13 @@
 import { GraduationCap, Zap, Users, Award, TrendingUp, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useFormModal } from "@/hooks/useFormModal";
+
 const learningPoints = [{
   icon: Users,
   text: "Como encantar o paciente já no primeiro contato, sem falar só de preço"
 }, {
   icon: Zap,
-  text: "O jeito certo de apresentar seus procedimentos para o paciente querer e não só “pensar depois"
+  text: "O jeito certo de apresentar seus procedimentos para o paciente querer e não só "pensar depois"
 }, {
   icon: Award,
   text: "Como transformar atendimentos em vendas de verdade, mesmo com agenda cheia e pouco tempo"
@@ -20,6 +21,7 @@ const learningPoints = [{
   icon: GraduationCap,
   text: "Passos simples para ter uma agenda sempre cheia e lucrativa"
 }];
+
 export const LearningSection = () => {
   const {
     openModal
@@ -56,7 +58,7 @@ export const LearningSection = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold">Se sua clínica está estagnada mesmo com um bom serviço… Você tem um gargalo comercial!</h3>
               <p className="text-xl text-white/90 max-w-2xl mx-auto">Clique no botão abaixo para garantir sua vaga e transformar cada contato em um procedimento na sua agenda</p>
-              <Button onClick={openModal} className="w-full font-bold py-4 shadow-lg shadow-purple-500/25 bg-gray-50 text-gray-950 text-base">
+              <Button onClick={openModal} className="w-full font-bold py-4 shadow-lg shadow-green-500/25 bg-green-500 hover:bg-green-600 text-white text-base">
                 PARTICIPAR DO WORKSHOP
               </Button>
             </div>
