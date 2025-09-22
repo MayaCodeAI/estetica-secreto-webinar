@@ -20,8 +20,8 @@ export const HeroSection = () => {
             alt="Dr. Johnny Secco" 
             className="w-full max-w-sm object-cover opacity-100"
             style={{
-              maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)',
-              WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)'
+              maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)'
             }}
           />
         </div>
@@ -42,12 +42,12 @@ export const HeroSection = () => {
           {/* Conteúdo centralizado - layout mais compacto */}
           <div className="space-y-3 text-center">
             <h1 style={{
-              fontSize: 'clamp(1.1rem, 4.5vw, 2rem)'
+              fontSize: 'clamp(1.3rem, 5.5vw, 2.4rem)'
             }} className="font-bold leading-[1.05] text-white">
               O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
             </h1>
             
-            <p className="text-xs text-white/90 leading-relaxed px-3">
+            <p className="text-sm text-white/90 leading-relaxed px-3">
               Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
             </p>
             
