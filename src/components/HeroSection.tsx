@@ -20,8 +20,8 @@ export const HeroSection = () => {
             alt="Dr. Johnny Secco" 
             className="w-full max-w-sm object-cover opacity-100"
             style={{
-              background: 'transparent'
-            }}
+                background: 'transparent'
+                  }}
           />
         </div>
       </div>
