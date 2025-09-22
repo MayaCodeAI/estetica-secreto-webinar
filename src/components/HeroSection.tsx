@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
 // Usando caminhos diretos em vez de imports problemáticos
-const drJohnny = "/src/assets/dr-johnny.webp";
-const logoSegredos = "/src/assets/logo-isolada.webp";
+const drJohnny = "https://res.cloudinary.com/dq9cckhd4/image/upload/v1758570124/dr-jonny_aucmxa.webp";
+const logoSegredos = "https://res.cloudinary.com/dq9cckhd4/image/upload/v1758570127/logo-isolada_j8vbcj.webp";
 
 export const HeroSection = () => {
   const {
@@ -70,53 +70,37 @@ export const HeroSection = () => {
 
         {/* Desktop Layout */}
         <div className="hidden lg:block">
-          <div className="min-h-screen flex items-center">
-            <div className="w-full grid grid-cols-12 gap-8 items-center">
-              {/* Coluna Esquerda - Conteúdo */}
-              <div className="col-span-7 space-y-8">
-                {/* Logo no topo esquerdo */}
-                <div className="mb-8">
-                  <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-md object-contain" />
-                </div>
-                
-                {/* Headlines */}
-                <div className="space-y-6">
-                  <h1 style={{
-                    fontSize: 'clamp(2rem, 3.5vw, 3.2rem)'
-                  }} className="font-bold leading-tight text-white">
-                    O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
-                  </h1>
-                  
-                  <p className="text-xl text-white/90 leading-relaxed max-w-2xl">
-                    Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
-                  </p>
-                </div>
+          <div className="min-h-screen flex flex-col justify-center">
+            {/* Logo centralizada no topo */}
+            <div className="flex justify-center mb-12">
+              <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-lg object-contain" />
+            </div>
+            
+            {/* Conteúdo principal centralizado */}
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <h1 style={{
+                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)'
+              }} className="font-bold leading-tight text-white">
+                O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
+              </h1>
+              
+              <p className="text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
+                Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
+              </p>
 
-                {/* CTA Button */}
-                <div className="pt-4">
-                  <Button onClick={openModal} className="bg-green-600 hover:bg-green-700 text-white font-bold py-6 px-10 text-xl shadow-lg shadow-green-500/25 transition-all duration-200">
-                    CADASTRE-SE GRATUITAMENTE
-                  </Button>
-                </div>
-
-                {/* Data e Horário */}
-                <div className="bg-black/40 backdrop-blur-sm border border-purple-400/40 rounded-2xl p-6 max-w-sm">
-                  <p className="text-xl font-bold text-white mb-2">
-                    Dia 07 de Outubro, às 20:00h
-                  </p>
-                  <p className="text-white/80 text-base">2025 • Terça-feira • Horário de Brasília</p>
-                </div>
+              {/* Botão VERDE centralizado */}
+              <div className="pt-6">
+                <Button onClick={openModal} className="bg-green-600 hover:bg-green-700 text-white font-bold py-6 px-12 text-xl shadow-lg shadow-green-500/25 transition-all duration-200">
+                  CADASTRE-SE GRATUITAMENTE
+                </Button>
               </div>
 
-              {/* Coluna Direita - Imagem */}
-              <div className="col-span-5 flex justify-end">
-                <div className="relative">
-                  <img 
-                    src={drJohnny} 
-                    alt="Dr. Johnny Secco" 
-                    className="w-full max-w-md object-cover"
-                  />
-                </div>
+              {/* Data e Horário centralizado */}
+              <div className="bg-black/40 backdrop-blur-sm border border-purple-400/40 rounded-2xl p-8 max-w-lg mx-auto">
+                <p className="text-2xl font-bold text-white mb-3">
+                  Dia 07 de Outubro, às 20:00h
+                </p>
+                <p className="text-white/80 text-lg">2025 • Terça-feira • Horário de Brasília</p>
               </div>
             </div>
           </div>
