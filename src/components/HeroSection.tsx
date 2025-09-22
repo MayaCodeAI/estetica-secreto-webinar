@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
 // Usando caminhos diretos em vez de imports problemáticos
-const drJohnny = "/assets/dr-jonny.webp";
-const logoSegredos = "/assets/logo-isolada.webp";
+const drJohnny = "/assets/dr-johnny.png";
+const logoSegredos = "/assets/logo-segredos.png";
 
 export const HeroSection = () => {
   const {
