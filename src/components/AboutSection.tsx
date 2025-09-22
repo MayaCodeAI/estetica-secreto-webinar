@@ -2,11 +2,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Clock, Award, Users, Star } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
-import drJohnnyBio from "@/assets/dr-johnny-bio.png";
+// Importar a imagem do Dr. Johnny
+import drJohnny from "@/assets/dr-johnny.png";
+
 export const AboutSection = () => {
   const {
     openModal
   } = useFormModal();
+  
   return <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center space-y-12">
@@ -15,35 +18,32 @@ export const AboutSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white">
               Sobre o <span className="text-purple-400">Dr. Johnny Secco</span>
             </h2>
+            
+            {/* Imagem do Dr. Johnny logo abaixo do título */}
+            <div className="flex justify-center">
+              <img 
+                src={drJohnny} 
+                alt="Dr. Johnny Secco" 
+                className="w-64 h-80 object-cover rounded-2xl shadow-2xl border-2 border-purple-400/30"
+              />
+            </div>
+            
             <p className="text-xl text-white/80">Dr. Johnny Secco é cirurgião-dentista formado pela Universidade Unipar – PR e referência nacional em gestão e crescimento de clínicas.</p>
           </div>
 
-          {/* About Content - Mobile */}
-          <div className="block md:hidden">
-            {/* Texto primeiro no mobile */}
-            <div className="space-y-6 text-left mb-8">
+          {/* About Content */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6 text-left">
               <p className="text-lg text-white/90 leading-relaxed">Empresário visionário, é gestor de 26+ clínicas em diferentes estados e fundador da Hof Master, instituição que forma profissionais de alta performance no mercado estético.</p>
               
               <p className="text-lg text-white/90 leading-relaxed">Com mais de 15 milhões faturados, atua como embaixador da IbraMed, speaker da Lacutanê e parceiro de marcas líderes do setor.</p>
               
-              <p className="text-lg text-white/90 leading-relaxed">É também cofundador do ecossistema DESTRAVE, que potencializa a gestão e a escalabilidade de clínicas em todo o Brasil.</p>
-              
-              <p className="text-lg text-white/90 leading-relaxed">Dr. Johnny une prática clínica, visão estratégica e espírito empreendedor para transformar o mercado estético e inspirar novos líderes.</p>
+              <p className="text-lg text-white/90 leading-relaxed">É também cofundador do ecossistema DESTRAVE, que potencializa a gestão e a escalabilidade de clínicas em todo o Brasil.
+
+
+Dr. Johnny une prática clínica, visão estratégica e espírito empreendedor para transformar o mercado estético e inspirar novos líderes.</p>
             </div>
-            
-            {/* Imagem abaixo no mobile */}
-            <div className="flex justify-center mb-8">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-purple-400/30 rounded-2xl blur-xl transform scale-105"></div>
-                <img 
-                  src={drJohnnyBio} 
-                  alt="Dr. Johnny Secco - Biografia Profissional" 
-                  className="relative w-80 h-80 object-cover rounded-2xl shadow-2xl border border-purple-500/20"
-                />
-              </div>
-            </div>
-            
-            {/* Stats no mobile */}
+
             <div className="space-y-4">
               <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
                 <div className="flex items-center space-x-3">
@@ -73,64 +73,6 @@ export const AboutSection = () => {
                     <p className="text-white/70 text-sm">Referência nacional</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* About Content - Desktop */}
-          <div className="hidden md:grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 text-left">
-              <p className="text-lg text-white/90 leading-relaxed">Empresário visionário, é gestor de 26+ clínicas em diferentes estados e fundador da Hof Master, instituição que forma profissionais de alta performance no mercado estético.</p>
-              
-              <p className="text-lg text-white/90 leading-relaxed">Com mais de 15 milhões faturados, atua como embaixador da IbraMed, speaker da Lacutanê e parceiro de marcas líderes do setor.</p>
-              
-              <p className="text-lg text-white/90 leading-relaxed">É também cofundador do ecossistema DESTRAVE, que potencializa a gestão e a escalabilidade de clínicas em todo o Brasil.</p>
-              
-              <p className="text-lg text-white/90 leading-relaxed">Dr. Johnny une prática clínica, visão estratégica e espírito empreendedor para transformar o mercado estético e inspirar novos líderes.</p>
-              
-              {/* Stats no desktop */}
-              <div className="grid grid-cols-1 gap-4 mt-8">
-                <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
-                  <div className="flex items-center space-x-3">
-                    <Award className="h-6 w-6 text-purple-400" />
-                    <div>
-                      <p className="text-white font-semibold">+15 Anos de Experiência</p>
-                      <p className="text-white/70 text-sm">Em harmonização facial</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
-                  <div className="flex items-center space-x-3">
-                    <Users className="h-6 w-6 text-purple-400" />
-                    <div>
-                      <p className="text-white font-semibold">+20.000 Procedimentos</p>
-                      <p className="text-white/70 text-sm">Realizados com sucesso</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
-                  <div className="flex items-center space-x-3">
-                    <Star className="h-6 w-6 text-purple-400" />
-                    <div>
-                      <p className="text-white font-semibold">Especialista Reconhecido</p>
-                      <p className="text-white/70 text-sm">Referência nacional</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Imagem ao lado no desktop */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/40 to-purple-400/40 rounded-3xl blur-2xl transform scale-110"></div>
-                <img 
-                  src={drJohnnyBio} 
-                  alt="Dr. Johnny Secco - Biografia Profissional" 
-                  className="relative w-96 h-96 object-cover rounded-3xl shadow-2xl border border-purple-500/30 transform hover:scale-105 transition-transform duration-300"
-                />
               </div>
             </div>
           </div>
