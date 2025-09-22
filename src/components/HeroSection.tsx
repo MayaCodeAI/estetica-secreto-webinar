@@ -11,9 +11,9 @@ export const HeroSection = () => {
     openModal
   } = useFormModal();
   
-  return <section className="relative bg-black overflow-hidden">
-      {/* Dr. Johnny como background centralizado com fade - APENAS MOBILE */}
-      <div className="absolute inset-0 flex items-start justify-center pt-4 lg:hidden">
+  return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
+      {/* Dr. Johnny como background centralizado com fade */}
+      <div className="absolute inset-0 flex items-start justify-center pt-4">
         <div className="relative">
           <img 
             src={drJohnny} 
@@ -28,11 +28,11 @@ export const HeroSection = () => {
       </div>
       
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-black/20 lg:bg-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
-        {/* Mobile Layout - EXATAMENTE COMO ESTAVA */}
+        {/* Mobile Layout */}
         <div className="lg:hidden">
           {/* Logo centralizada - mais próxima da headline */}
           <div className="flex justify-center mb-2 pt-8">
@@ -68,58 +68,39 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Desktop Layout - VERSÃO OTIMIZADA SEM RETÂNGULO PRETO */}
+        {/* Desktop Layout */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-12 gap-12 items-start px-8 py-8">
-            {/* Coluna da Esquerda - Conteúdo Textual */}
-            <div className="col-span-7 space-y-6 pt-16">
+          <div className="min-h-screen flex flex-col justify-center">
+            {/* Logo centralizada no topo */}
+            <div className="flex justify-center mb-12">
+              <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-lg object-contain" />
+            </div>
+            
+            {/* Conteúdo principal centralizado */}
+            <div className="max-w-4xl mx-auto text-center space-y-8">
               <h1 style={{
-                fontSize: 'clamp(2.2rem, 4vw, 3.2rem)'
+                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)'
               }} className="font-bold leading-tight text-white">
                 O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
               </h1>
               
-              <p className="text-lg text-white/90 leading-relaxed max-w-2xl">
+              <p className="text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
                 Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
               </p>
 
-              {/* Botão VERDE */}
-              <div className="pt-2">
-                <Button onClick={openModal} className="bg-green-600 hover:bg-green-700 text-white font-bold py-6 px-10 text-lg shadow-lg shadow-green-500/25 transition-all duration-200">
+              {/* Botão VERDE centralizado */}
+              <div className="pt-6">
+                <Button onClick={openModal} className="bg-green-600 hover:bg-green-700 text-white font-bold py-6 px-12 text-xl shadow-lg shadow-green-500/25 transition-all duration-200">
                   CADASTRE-SE GRATUITAMENTE
                 </Button>
               </div>
 
-              {/* Data e Horário */}
-              <div className="bg-black/50 backdrop-blur-sm border border-purple-400/50 rounded-2xl p-6 max-w-md">
-                <p className="text-xl font-bold text-white mb-2">
+              {/* Data e Horário centralizado */}
+              <div className="bg-black/40 backdrop-blur-sm border border-purple-400/40 rounded-2xl p-8 max-w-lg mx-auto">
+                <p className="text-2xl font-bold text-white mb-3">
                   Dia 07 de Outubro, às 20:00h
                 </p>
-                <p className="text-white/80 text-base">2025 • Terça-feira • Horário de Brasília</p>
-              </div>
-            </div>
-
-            {/* Coluna da Direita - Imagem do Dr. Johnny com Logo sobreposta */}
-            <div className="col-span-5 flex items-center justify-center">
-              <div className="relative">
-                {/* Imagem do Dr. Johnny SEM FUNDO PRETO */}
-                <img 
-                  src={drJohnny} 
-                  alt="Dr. Johnny Secco" 
-                  className="w-full max-w-lg object-cover"
-                  style={{
-                    background: 'transparent'
-                  }}
-                />
-                
-                {/* Logo sobreposta na parte inferior da imagem */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <img 
-                    src={logoSegredos} 
-                    alt="Segredos Comerciais da Estética" 
-                    className="w-full max-w-xs object-contain drop-shadow-lg"
-                  />
-                </div>
+                <p className="text-white/80 text-lg">Terça-feira • Horário de Brasília</p>
               </div>
             </div>
           </div>
