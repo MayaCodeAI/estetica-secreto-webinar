@@ -12,58 +12,58 @@ export const HeroSection = () => {
   } = useFormModal();
   
   return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
-      {/* Background overlay with pattern */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/85 to-purple-900/20" />
+      {/* Dr. Johnny como background centralizado com fade */}
+      <div className="absolute inset-0 flex items-start justify-center pt-20">
+        <div className="relative">
+          <img 
+            src={drJohnny} 
+            alt="Dr. Johnny Secco" 
+            className="w-full max-w-md object-cover opacity-70"
+            style={{
+              maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)'
+            }}
+          />
+        </div>
+      </div>
+      
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
         {/* Mobile Layout */}
-        <div className="lg:hidden">
-          {/* Header com logo e Dr. Johnny lado a lado */}
-          <div className="flex items-center justify-between mb-6">
-            {/* Logo à esquerda */}
-            <div className="w-1/2 pr-2">
-              <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[140px] object-contain" />
-            </div>
-            
-            {/* Dr. Johnny à direita - como avatar circular */}
-            <div className="w-1/2 flex justify-end">
-              <div className="relative">
-                <img 
-                  src={drJohnny} 
-                  alt="Dr. Johnny Secco" 
-                  className="w-20 h-20 rounded-full object-cover border-2 border-purple-400/50"
-                />
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-background"></div>
-              </div>
-            </div>
+        <div className="lg:hidden min-h-screen flex flex-col">
+          {/* Logo centralizada no topo */}
+          <div className="flex justify-center mb-8">
+            <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[200px] object-contain" />
           </div>
           
-          {/* Conteúdo principal */}
-          <div className="space-y-4 text-center">
+          {/* Conteúdo centralizado */}
+          <div className="flex-1 flex flex-col justify-center space-y-5 text-center">
             <h1 style={{
-              fontSize: 'clamp(1.1rem, 4.5vw, 2rem)'
-            }} className="font-bold leading-[1.05] text-white">
+              fontSize: 'clamp(1.2rem, 5vw, 2.2rem)'
+            }} className="font-bold leading-[1.1] text-white">
               O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
             </h1>
             
-            <p className="text-sm text-white/90 leading-relaxed px-2">
+            <p className="text-sm text-white/90 leading-relaxed px-3">
               Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
             </p>
             
             {/* Botão VERDE */}
-            <div className="mt-6">
+            <div className="pt-4">
               <Button onClick={openModal} className="w-full h-12 bg-green-600 hover:bg-green-700 text-white font-bold text-base shadow-lg shadow-green-500/25 transition-all duration-200">
                 CADASTRE-SE GRATUITAMENTE
               </Button>
             </div>
             
             {/* Data e Horário */}
-            <div className="bg-black/30 backdrop-blur-sm border border-purple-400/30 rounded-xl p-4">
+            <div className="bg-black/40 backdrop-blur-sm border border-purple-400/40 rounded-xl p-4">
               <p className="text-base font-bold text-white">
                 Dia 07 de Outubro, às 20:00h
               </p>
-              <p className="text-xs text-white/70">2025 • Terça-feira • Horário de Brasília</p>
+              <p className="text-xs text-white/80">2025 • Terça-feira • Horário de Brasília</p>
             </div>
           </div>
         </div>
@@ -71,53 +71,36 @@ export const HeroSection = () => {
         {/* Desktop Layout */}
         <div className="hidden lg:block">
           <div className="min-h-screen flex flex-col justify-center">
-            {/* Header com logo e Dr. Johnny */}
-            <div className="flex items-start justify-between mb-8">
-              {/* Logo */}
-              <div>
-                <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-md object-contain" />
-              </div>
-              
-              {/* Dr. Johnny como hero image */}
-              <div className="relative">
-                <img 
-                  src={drJohnny} 
-                  alt="Dr. Johnny Secco" 
-                  className="w-48 h-64 object-cover rounded-2xl shadow-2xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent rounded-2xl"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-white font-bold text-lg">Dr. Johnny Secco</p>
-                  <p className="text-white/80 text-sm">Especialista em Vendas</p>
-                </div>
-              </div>
+            {/* Logo centralizada no topo */}
+            <div className="flex justify-center mb-12">
+              <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-lg object-contain" />
             </div>
             
             {/* Conteúdo principal centralizado */}
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
               <h1 style={{
-                fontSize: 'clamp(2rem, 4vw, 3.2rem)'
+                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)'
               }} className="font-bold leading-tight text-white">
                 O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
               </h1>
               
-              <p className="text-lg text-white/85 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
                 Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
               </p>
 
               {/* Botão VERDE centralizado */}
-              <div className="pt-4">
+              <div className="pt-6">
                 <Button onClick={openModal} className="bg-green-600 hover:bg-green-700 text-white font-bold py-6 px-12 text-xl shadow-lg shadow-green-500/25 transition-all duration-200">
                   CADASTRE-SE GRATUITAMENTE
                 </Button>
               </div>
 
               {/* Data e Horário centralizado */}
-              <div className="bg-black/30 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 max-w-lg mx-auto">
-                <p className="text-2xl font-bold text-white mb-2">
+              <div className="bg-black/40 backdrop-blur-sm border border-purple-400/40 rounded-2xl p-8 max-w-lg mx-auto">
+                <p className="text-2xl font-bold text-white mb-3">
                   Dia 07 de Outubro, às 20:00h
                 </p>
-                <p className="text-white/75">2025 • Terça-feira • Horário de Brasília</p>
+                <p className="text-white/80 text-lg">2025 • Terça-feira • Horário de Brasília</p>
               </div>
             </div>
           </div>
