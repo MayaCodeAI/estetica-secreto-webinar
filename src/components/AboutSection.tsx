@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Clock, Award, Users, Star } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
 // Importar a imagem do Dr. Johnny
-import drJohnny from "@/assets/dr-johnny.png";
+import drJohnny from "@/assets/dr-johnny-combined.png";
 
 export const AboutSection = () => {
   const {
