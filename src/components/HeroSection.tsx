@@ -34,12 +34,12 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
         {/* Mobile Layout */}
         <div className="lg:hidden">
-          {/* Logo posicionada no canto superior esquerdo */}
-          <div className="absolute top-4 left-4 z-20">
+          {/* Logo centralizada no topo - descida um pouco */}
+          <div className="flex justify-center mb-4 pt-6">
             <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[180px] object-contain" />
           </div>
           
-          {/* Conteúdo centralizado */}
+          {/* Conteúdo centralizado - layout mais compacto */}
           <div className="space-y-3 text-center">
             <h1 style={{
               fontSize: 'clamp(1.1rem, 4.5vw, 2rem)'
