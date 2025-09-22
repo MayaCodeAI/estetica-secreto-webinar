@@ -12,28 +12,31 @@ export const HeroSection = () => {
   } = useFormModal();
   
   return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
-      {/* Background overlay with pattern */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/85 to-purple-900/20" />
+      {/* Dr. Johnny como background centralizado com fade */}
+      <div className="absolute inset-0 flex items-start justify-center pt-4">
+        <div className="relative">
+          <img 
+            src={drJohnny} 
+            alt="Dr. Johnny Secco" 
+            className="w-full max-w-sm object-cover opacity-80"
+            style={{
+              maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)'
+            }}
+          />
+        </div>
+      </div>
+      
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
         {/* Mobile Layout */}
         <div className="lg:hidden">
-          {/* Header com logo à esquerda e Dr. Johnny à direita */}
-          <div className="flex items-start justify-between pt-4 mb-6">
-            {/* Logo à esquerda */}
-            <div className="w-1/2 pr-4">
-              <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[160px] object-contain" />
-            </div>
-            
-            {/* Dr. Johnny à direita */}
-            <div className="w-1/2 flex justify-end">
-              <img 
-                src={drJohnny} 
-                alt="Dr. Johnny Secco" 
-                className="w-full max-w-[180px] object-cover opacity-90"
-              />
-            </div>
+          {/* Logo posicionada à esquerda */}
+          <div className="flex justify-start pt-4 mb-6 pl-4">
+            <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[160px] object-contain" />
           </div>
           
           {/* Conteúdo centralizado */}
