@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
 // Usando caminhos diretos em vez de imports problemáticos
-const drJohnny = "/assets/dr-johnny.png";
-const logoSegredos = "/assets/logo-segredos.png";
+const drJohnny = "https://res.cloudinary.com/dq9cckhd4/image/upload/v1758570124/dr-jonny_aucmxa.webp";
+const logoSegredos = "https://res.cloudinary.com/dq9cckhd4/image/upload/v1758570127/logo-isolada_j8vbcj.webp";
 
 export const HeroSection = () => {
   const {
