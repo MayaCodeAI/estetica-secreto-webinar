@@ -13,7 +13,7 @@ export const HeroSection = () => {
   
   return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
       {/* Dr. Johnny como background centralizado com fade */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-start justify-center pt-8">
         <div className="relative">
           <img 
             src={drJohnny} 
