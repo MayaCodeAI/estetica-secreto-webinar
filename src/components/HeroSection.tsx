@@ -107,6 +107,9 @@ export const HeroSection = () => {
                   src={drJohnny} 
                   alt="Dr. Johnny Secco" 
                   className="w-full max-w-lg object-cover"
+                  style={{
+                    background: 'transparent'
+                  }}
                 />
                 
                 {/* Logo sobreposta na parte inferior da imagem */}
