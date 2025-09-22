@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Clock, Award, Users, Star } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
 // Importar a imagem do Dr. Johnny
-import drJohnny from "@/assets/dr-johnny-combined.png";
+import drJohnny from "@/assets/dr-johnny.png";
 
 export const AboutSection = () => {
   const {
@@ -24,7 +24,7 @@ export const AboutSection = () => {
               <img 
                 src={drJohnny} 
                 alt="Dr. Johnny Secco" 
-                className="w-80 h-60 object-cover rounded-2xl shadow-2xl border-2 border-purple-400/30"
+                className="w-64 h-80 object-cover rounded-2xl shadow-2xl border-2 border-purple-400/30"
               />
             </div>
             
@@ -86,7 +86,7 @@ Dr. Johnny une prática clínica, visão estratégica e espírito empreendedor p
               <p className="text-lg text-white/90">
                 Esta é sua chance única de aprender diretamente com Dr. Johnny Secco
               </p>
-              <Button onClick={openModal} className="py-4 px-8 text-lg shadow-lg shadow-purple-500/25 text-zinc-950 bg-slate-50 text-left font-bold">
+              <Button onClick={openModal} className="py-4 px-8 text-lg shadow-lg shadow-green-500/25 bg-green-600 hover:bg-green-700 text-white font-bold">
                 PARTICIPAR DO WORKSHOP
               </Button>
             </div>
