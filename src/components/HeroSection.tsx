@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
 // Imagens na pasta assets
-import drJohnny from "@/assets/dr-johnny.png";
-import logoSegredos from "@/assets/logo-segredos.png";
+import drJohnny from "@/assets/dr-johnny.webp";
+import logoSegredos from "@/assets/logo-isolada.webp";
 
 export const HeroSection = () => {
   const {
