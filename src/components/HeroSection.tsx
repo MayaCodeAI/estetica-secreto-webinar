@@ -13,15 +13,15 @@ export const HeroSection = () => {
   
   return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
       {/* Dr. Johnny como background centralizado com fade */}
-      <div className="absolute inset-0 flex items-start justify-center pt-20">
+      <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative">
           <img 
             src={drJohnny} 
             alt="Dr. Johnny Secco" 
-            className="w-full max-w-md object-cover opacity-70"
+            className="w-full max-w-sm object-cover opacity-60"
             style={{
-              maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)',
-              WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.3) 80%, rgba(0,0,0,0) 100%)'
+              maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)'
             }}
           />
         </div>
@@ -33,34 +33,34 @@ export const HeroSection = () => {
       
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
         {/* Mobile Layout */}
-        <div className="lg:hidden min-h-screen flex flex-col">
+        <div className="lg:hidden">
           {/* Logo centralizada no topo */}
-          <div className="flex justify-center mb-8">
-            <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[200px] object-contain" />
+          <div className="flex justify-center mb-4 pt-2">
+            <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[180px] object-contain" />
           </div>
           
-          {/* Conteúdo centralizado */}
-          <div className="flex-1 flex flex-col justify-center space-y-5 text-center">
+          {/* Conteúdo centralizado - layout mais compacto */}
+          <div className="space-y-3 text-center">
             <h1 style={{
-              fontSize: 'clamp(1.2rem, 5vw, 2.2rem)'
-            }} className="font-bold leading-[1.1] text-white">
+              fontSize: 'clamp(1.1rem, 4.5vw, 2rem)'
+            }} className="font-bold leading-[1.05] text-white">
               O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
             </h1>
             
-            <p className="text-sm text-white/90 leading-relaxed px-3">
+            <p className="text-xs text-white/90 leading-relaxed px-3">
               Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
             </p>
             
             {/* Botão VERDE */}
-            <div className="pt-4">
-              <Button onClick={openModal} className="w-full h-12 bg-green-600 hover:bg-green-700 text-white font-bold text-base shadow-lg shadow-green-500/25 transition-all duration-200">
+            <div className="pt-3">
+              <Button onClick={openModal} className="w-full h-11 bg-green-600 hover:bg-green-700 text-white font-bold text-sm shadow-lg shadow-green-500/25 transition-all duration-200">
                 CADASTRE-SE GRATUITAMENTE
               </Button>
             </div>
             
             {/* Data e Horário */}
-            <div className="bg-black/40 backdrop-blur-sm border border-purple-400/40 rounded-xl p-4">
-              <p className="text-base font-bold text-white">
+            <div className="bg-black/40 backdrop-blur-sm border border-purple-400/40 rounded-xl p-3">
+              <p className="text-sm font-bold text-white">
                 Dia 07 de Outubro, às 20:00h
               </p>
               <p className="text-xs text-white/80">2025 • Terça-feira • Horário de Brasília</p>
