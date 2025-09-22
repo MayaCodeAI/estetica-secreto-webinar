@@ -19,12 +19,12 @@ export const AboutSection = () => {
               Sobre o <span className="text-purple-400">Dr. Johnny Secco</span>
             </h2>
             
-            {/* Imagem do Dr. Johnny logo abaixo do título */}
+            {/* Imagem do Dr. Johnny logo abaixo do título - sem moldura */}
             <div className="flex justify-center">
               <img 
                 src={drJohnny} 
                 alt="Dr. Johnny Secco" 
-                className="w-80 h-60 object-cover rounded-2xl shadow-2xl border-2 border-purple-400/30"
+                className="w-80 h-60 object-cover"
               />
             </div>
             
