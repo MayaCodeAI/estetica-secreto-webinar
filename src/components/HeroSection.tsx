@@ -12,7 +12,7 @@ export const HeroSection = () => {
   } = useFormModal();
   
   return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
-      {/* Dr. Johnny como background centralizado com fade */}
+      {/* Dr. Johnny como background centralizado com fade - APENAS MOBILE */}
       <div className="absolute inset-0 flex items-start justify-center pt-4 lg:hidden">
         <div className="relative">
           <img 
@@ -68,7 +68,7 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Desktop Layout - NOVO DESIGN OTIMIZADO */}
+        {/* Desktop Layout - VERSÃO OTIMIZADA SEM RETÂNGULO PRETO */}
         <div className="hidden lg:block">
           <div className="grid grid-cols-12 gap-12 items-start px-8 py-8">
             {/* Coluna da Esquerda - Conteúdo Textual */}
@@ -102,7 +102,7 @@ export const HeroSection = () => {
             {/* Coluna da Direita - Imagem do Dr. Johnny com Logo sobreposta */}
             <div className="col-span-5 flex items-center justify-center">
               <div className="relative">
-                {/* Imagem do Dr. Johnny */}
+                {/* Imagem do Dr. Johnny SEM FUNDO PRETO */}
                 <img 
                   src={drJohnny} 
                   alt="Dr. Johnny Secco" 
