@@ -34,8 +34,8 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
         {/* Mobile Layout */}
         <div className="lg:hidden">
-          {/* Logo posicionada à esquerda */}
-          <div className="flex justify-start pt-4 mb-6 pl-4">
+          {/* Logo posicionada à esquerda - mais alta */}
+          <div className="flex justify-start pt-2 mb-8 pl-4">
             <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[160px] object-contain" />
           </div>
           
