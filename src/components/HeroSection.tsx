@@ -11,29 +11,30 @@ export const HeroSection = () => {
     openModal
   } = useFormModal();
   
-  return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
-      {/* Dr. Johnny como background centralizado com fade */}
-      <div className="absolute inset-0 flex items-start justify-center pt-4">
-        <div className="relative">
-          <img 
-            src={drJohnny} 
-            alt="Dr. Johnny Secco" 
-            className="w-full max-w-sm object-cover opacity-100"
-            style={{
-              maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)',
-              WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)'
-            }}
-          />
-        </div>
-      </div>
-      
-      {/* Background overlay */}
+  return (
+    <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
+      {/* Background overlay e grid - mantidos */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
-        {/* Mobile Layout */}
+        {/* Mobile Layout - MANTIDO EXATAMENTE IGUAL */}
         <div className="lg:hidden">
+          {/* Dr. Johnny como background centralizado com fade - APENAS MOBILE */}
+          <div className="absolute inset-0 flex items-start justify-center pt-4">
+            <div className="relative">
+              <img 
+                src={drJohnny} 
+                alt="Dr. Johnny Secco" 
+                className="w-full max-w-sm object-cover opacity-100"
+                style={{
+                  maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)'
+                }}
+              />
+            </div>
+          </div>
+
           {/* Logo centralizada - mais próxima da headline */}
           <div className="flex justify-center mb-2 pt-8">
             <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[220px] object-contain" />
@@ -68,43 +69,64 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Desktop Layout */}
+        {/* Desktop Layout - NOVO LAYOUT LADO A LADO */}
         <div className="hidden lg:block">
-          <div className="min-h-screen flex flex-col justify-center">
-            {/* Logo centralizada no topo */}
-            <div className="flex justify-center mb-12">
-              <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-lg object-contain" />
+          <div className="min-h-screen flex flex-col">
+            {/* Logo no topo centralizada */}
+            <div className="flex justify-center pt-8 mb-16">
+              <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-md object-contain" />
             </div>
             
-            {/* Conteúdo principal centralizado */}
-            <div className="max-w-4xl mx-auto text-center space-y-8">
-              <h1 style={{
-                fontSize: 'clamp(2rem, 4.5vw, 3.5rem)'
-              }} className="font-bold leading-tight text-white">
-                O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
-              </h1>
-              
-              <p className="text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
-                Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
-              </p>
+            {/* Grid com 2 colunas - conteúdo e imagens */}
+            <div className="flex-1 grid lg:grid-cols-2 gap-12 items-center">
+              {/* Coluna Esquerda - Conteúdo */}
+              <div className="space-y-8">
+                <h1 style={{
+                  fontSize: 'clamp(2rem, 3.5vw, 3.2rem)'
+                }} className="font-bold leading-tight text-white">
+                  O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
+                </h1>
+                
+                <p className="text-lg text-white/90 leading-relaxed">
+                  Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
+                </p>
 
-              {/* Botão VERDE centralizado */}
-              <div className="pt-6">
-                <Button onClick={openModal} className="bg-green-600 hover:bg-green-700 text-white font-bold py-6 px-12 text-xl shadow-lg shadow-green-500/25 transition-all duration-200">
-                  CADASTRE-SE GRATUITAMENTE
-                </Button>
+                {/* Botão VERDE */}
+                <div className="pt-2">
+                  <Button onClick={openModal} className="bg-green-600 hover:bg-green-700 text-white font-bold py-5 px-10 text-lg shadow-lg shadow-green-500/25 transition-all duration-200">
+                    CADASTRE-SE GRATUITAMENTE
+                  </Button>
+                </div>
+
+                {/* Data e Horário */}
+                <div className="bg-black/40 backdrop-blur-sm border border-purple-400/40 rounded-xl p-6 max-w-sm">
+                  <p className="text-xl font-bold text-white mb-2">
+                    Dia 07 de Outubro, às 20:00h
+                  </p>
+                  <p className="text-white/80">Terça-feira • Horário de Brasília</p>
+                </div>
               </div>
 
-              {/* Data e Horário centralizado */}
-              <div className="bg-black/40 backdrop-blur-sm border border-purple-400/40 rounded-2xl p-8 max-w-lg mx-auto">
-                <p className="text-2xl font-bold text-white mb-3">
-                  Dia 07 de Outubro, às 20:00h
-                </p>
-                <p className="text-white/80 text-lg">2025 • Terça-feira • Horário de Brasília</p>
+              {/* Coluna Direita - Imagem do Dr. Johnny */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <img 
+                    src={drJohnny} 
+                    alt="Dr. Johnny Secco" 
+                    className="w-full max-w-md object-cover"
+                    style={{
+                      maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.95) 50%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0) 90%)',
+                      WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.95) 50%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0) 90%)'
+                    }}
+                  />
+                  {/* Efeito de brilho sutil atrás da imagem */}
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-3xl transform scale-110"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
