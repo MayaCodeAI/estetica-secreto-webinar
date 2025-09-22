@@ -2,8 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Clock, Award, Users, Star } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
-// Importar a imagem do Dr. Johnny
-import drJohnny from "@/assets/dr-johnny-combined.png";
+// Imagem do Dr. Johnny via Cloudinary
+const drJohnny = "https://res.cloudinary.com/dq9cckhd4/image/upload/v1758571477/imagem-johnny_l0pdoj.webp";
 
 export const AboutSection = () => {
   const {
