@@ -7,7 +7,7 @@ const learningPoints = [{
   text: "Como encantar o paciente já no primeiro contato, sem falar só de preço"
 }, {
   icon: Zap,
-  text: "O jeito certo de apresentar seus procedimentos para o paciente querer e não só "pensar depois"
+  text: "O jeito certo de apresentar seus procedimentos para o paciente querer e não só 'pensar depois'"
 }, {
   icon: Award,
   text: "Como transformar atendimentos em vendas de verdade, mesmo com agenda cheia e pouco tempo"
