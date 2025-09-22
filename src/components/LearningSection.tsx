@@ -1,12 +1,13 @@
 import { GraduationCap, Zap, Users, Award, TrendingUp, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useFormModal } from "@/hooks/useFormModal";
+
 const learningPoints = [{
   icon: Users,
   text: "Como encantar o paciente já no primeiro contato, sem falar só de preço"
 }, {
   icon: Zap,
-  text: "O jeito certo de apresentar seus procedimentos para o paciente querer e não só “pensar depois"
+  text: "O jeito certo de apresentar seus procedimentos para o paciente querer e não só "pensar depois"
 }, {
   icon: Award,
   text: "Como transformar atendimentos em vendas de verdade, mesmo com agenda cheia e pouco tempo"
@@ -20,10 +21,12 @@ const learningPoints = [{
   icon: GraduationCap,
   text: "Passos simples para ter uma agenda sempre cheia e lucrativa"
 }];
+
 export const LearningSection = () => {
   const {
     openModal
   } = useFormModal();
+  
   return <section className="py-20 bg-card/30">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
@@ -34,7 +37,6 @@ export const LearningSection = () => {
             </h2>
             
           </div>
-
           {/* Learning Points Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {learningPoints.map((point, index) => <div key={index} className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-400/40">
@@ -50,13 +52,12 @@ export const LearningSection = () => {
                 </div>
               </div>)}
           </div>
-
           {/* Call to Action */}
           <div className="bg-gradient-to-r from-purple-600 to-purple-700 rounded-3xl p-8 text-center text-white shadow-2xl shadow-purple-500/20">
             <div className="space-y-6">
               <h3 className="text-3xl font-bold">Se sua clínica está estagnada mesmo com um bom serviço… Você tem um gargalo comercial!</h3>
               <p className="text-xl text-white/90 max-w-2xl mx-auto">Clique no botão abaixo para garantir sua vaga e transformar cada contato em um procedimento na sua agenda</p>
-              <Button onClick={openModal} className="w-full font-bold py-4 shadow-lg shadow-purple-500/25 bg-gray-50 text-gray-950 text-base">
+              <Button onClick={openModal} className="w-full font-bold py-4 shadow-lg shadow-green-500/25 bg-green-600 hover:bg-green-700 text-white text-base">
                 PARTICIPAR DO WORKSHOP
               </Button>
             </div>
