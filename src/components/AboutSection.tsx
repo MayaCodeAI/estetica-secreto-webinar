@@ -24,7 +24,7 @@ export const AboutSection = () => {
               <img 
                 src={drJohnny} 
                 alt="Dr. Johnny Secco" 
-                className="w-64 h-80 object-cover rounded-2xl shadow-2xl border-2 border-purple-400/30"
+                className="w-80 h-60 object-cover rounded-2xl shadow-2xl border-2 border-purple-400/30"
               />
             </div>
             
