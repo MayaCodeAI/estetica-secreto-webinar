@@ -13,12 +13,12 @@ export const HeroSection = () => {
   
   return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
       {/* Dr. Johnny como background centralizado com fade */}
-      <div className="absolute inset-0 flex items-start justify-center pt-8">
+      <div className="absolute inset-0 flex items-start justify-center pt-4">
         <div className="relative">
           <img 
             src={drJohnny} 
             alt="Dr. Johnny Secco" 
-            className="w-full max-w-sm object-cover opacity-60"
+            className="w-full max-w-sm object-cover opacity-80"
             style={{
               maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)',
               WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)'
