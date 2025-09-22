@@ -3,10 +3,12 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
 import drJohnnyCombined from "@/assets/dr-johnny-combined.png";
+
 export const HeroSection = () => {
   const {
     openModal
   } = useFormModal();
+  
   return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
       {/* Background overlay with pattern */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/90 to-purple-900/10" />
@@ -23,36 +25,26 @@ export const HeroSection = () => {
           {/* Mobile Content */}
           <div className="space-y-4 text-center">
             <h1 style={{
-            fontSize: 'clamp(1.5rem, 5vw, 3rem)'
-          }} className="font-bold leading-[1.2] text-white">
+              fontSize: 'clamp(1.5rem, 5vw, 3rem)'
+            }} className="font-bold leading-[1.2] text-white">
               O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
             </h1>
             
             <p className="text-base md:text-lg text-white/90 leading-relaxed px-2">Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.</p>
             
-            {/* Event Details - Mobile - Stacked */}
-            <div className="space-y-4">
-              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
-                <div className="flex items-center justify-center space-x-2 mb-3">
-                  <Calendar className="h-5 w-5 text-purple-400" />
-                  <h3 className="text-sm font-semibold text-white">Data</h3>
-                </div>
-                <p className="text-xl font-bold text-purple-400">07 de Outubro</p>
-                <p className="text-sm text-white/70">2025 • Terça-feira</p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
-                <div className="flex items-center justify-center space-x-2 mb-3">
-                  <Clock className="h-5 w-5 text-purple-400" />
-                  <h3 className="text-sm font-semibold text-white">Horário</h3>
-                </div>
-                <p className="text-xl font-bold text-purple-400">20:00h</p>
-                <p className="text-sm text-white/70">Horário de Brasília</p>
-              </div>
+            {/* Botão VERDE primeiro */}
+            <div className="mt-8">
+              <Button onClick={openModal} className="w-full h-14 bg-green-600 hover:bg-green-700 text-white font-bold text-lg shadow-lg shadow-green-500/25 transition-all duration-200">
+                CADASTRE-SE GRATUITAMENTE
+              </Button>
             </div>
             
-            <div className="mt-8">
-              <Button onClick={openModal} className="w-full h-14 bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg shadow-lg shadow-purple-500/25 transition-all duration-200">CADASTRE-SE GRATUITAMENTE</Button>
+            {/* Data e Horário juntos ABAIXO do botão */}
+            <div className="mt-6 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl p-4">
+              <p className="text-lg font-bold text-white">
+                Dia 07 de Outubro, às 20:00h
+              </p>
+              <p className="text-sm text-white/70">2025 • Terça-feira • Horário de Brasília</p>
             </div>
           </div>
         </div>
@@ -63,40 +55,28 @@ export const HeroSection = () => {
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-6">
               <h1 style={{
-              fontSize: 'clamp(2rem, 4vw, 3rem)'
-            }} className="font-bold leading-tight text-white">
+                fontSize: 'clamp(2rem, 4vw, 3rem)'
+              }} className="font-bold leading-tight text-white">
                 O que as melhores clínicas estão fazendo para <span className="text-purple-400">encantar, converter e fidelizar</span> pacientes todos os dias!
               </h1>
               
               <p className="text-lg text-white/80 leading-relaxed">
                 Um workshop ao vivo, com técnicas comerciais reveladas por quem está por trás delas e responsável por mais de 20.000 vendas de procedimentos estéticos no Brasil.
               </p>
-              
-              
             </div>
 
-            {/* Event Details */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6">
-                <div className="flex items-center space-x-3 mb-3">
-                  <Calendar className="h-6 w-6 text-purple-400" />
-                  <h3 className="text-lg font-semibold text-white">Data</h3>
-                </div>
-                <p className="text-2xl font-bold text-purple-400">07 de Outubro</p>
-                <p className="text-white/70">2025 • Terça-feira</p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6">
-                <div className="flex items-center space-x-3 mb-3">
-                  <Clock className="h-6 w-6 text-purple-400" />
-                  <h3 className="text-lg font-semibold text-white">Horário</h3>
-                </div>
-                <p className="text-2xl font-bold text-purple-400">20:00h</p>
-                <p className="text-white/70">Horário de Brasília</p>
-              </div>
-            </div>
+            {/* Botão VERDE */}
+            <Button onClick={openModal} className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-green-500/25 transition-all duration-200">
+              CADASTRE-SE GRATUITAMENTE
+            </Button>
 
-            <Button onClick={openModal} className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 text-lg shadow-lg shadow-purple-500/25 transition-all duration-200">CADASTRE-SE GRATUITAMENTE</Button>
+            {/* Data e Horário juntos ABAIXO do botão */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center">
+              <p className="text-2xl font-bold text-white mb-2">
+                Dia 07 de Outubro, às 20:00h
+              </p>
+              <p className="text-white/70">2025 • Terça-feira • Horário de Brasília</p>
+            </div>
           </div>
 
           {/* Right Section - Combined Logo + Dr. Johnny Image */}
