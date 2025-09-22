@@ -70,9 +70,9 @@ export const HeroSection = () => {
 
         {/* Desktop Layout - NOVO DESIGN OTIMIZADO */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-12 gap-12 items-center px-8 py-16">
+          <div className="grid grid-cols-12 gap-12 items-start px-8 py-8">
             {/* Coluna da Esquerda - Conteúdo Textual */}
-            <div className="col-span-7 space-y-6">
+            <div className="col-span-7 space-y-6 pt-16">
               <h1 style={{
                 fontSize: 'clamp(2.2rem, 4vw, 3.2rem)'
               }} className="font-bold leading-tight text-white">
@@ -99,21 +99,25 @@ export const HeroSection = () => {
               </div>
             </div>
 
-            {/* Coluna da Direita - Imagem do Dr. Johnny + Logo */}
-            <div className="col-span-5 flex flex-col items-center justify-center space-y-2">
-              {/* Imagem do Dr. Johnny */}
-              <img 
-                src={drJohnny} 
-                alt="Dr. Johnny Secco" 
-                className="w-full max-w-lg object-cover"
-              />
-              
-              {/* Logo posicionada ABAIXO da imagem */}
-              <img 
-                src={logoSegredos} 
-                alt="Segredos Comerciais da Estética" 
-                className="w-full max-w-sm object-contain"
-              />
+            {/* Coluna da Direita - Imagem do Dr. Johnny com Logo sobreposta */}
+            <div className="col-span-5 flex items-center justify-center">
+              <div className="relative">
+                {/* Imagem do Dr. Johnny */}
+                <img 
+                  src={drJohnny} 
+                  alt="Dr. Johnny Secco" 
+                  className="w-full max-w-lg object-cover"
+                />
+                
+                {/* Logo sobreposta na parte inferior da imagem */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                  <img 
+                    src={logoSegredos} 
+                    alt="Segredos Comerciais da Estética" 
+                    className="w-full max-w-xs object-contain drop-shadow-lg"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
