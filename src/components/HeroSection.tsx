@@ -18,7 +18,7 @@ export const HeroSection = () => {
           <img 
             src={drJohnny} 
             alt="Dr. Johnny Secco" 
-            className="w-full max-w-sm object-cover opacity-80"
+            className="w-full max-w-sm object-cover opacity-95"
             style={{
               maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)',
               WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)'
@@ -34,9 +34,9 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
         {/* Mobile Layout */}
         <div className="lg:hidden">
-          {/* Logo posicionada à esquerda - mais alta */}
-          <div className="flex justify-start pt-2 mb-8 pl-4">
-            <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[160px] object-contain" />
+          {/* Logo posicionada à esquerda - mais alta e maior */}
+          <div className="flex justify-start pt-1 mb-12 pl-4">
+            <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[200px] object-contain" />
           </div>
           
           {/* Conteúdo centralizado */}
