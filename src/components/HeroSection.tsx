@@ -63,7 +63,7 @@ export const HeroSection = () => {
               <p className="text-sm font-bold text-white">
                 Dia 07 de Outubro, às 20:00h
               </p>
-              <p className="text-xs text-white/80">2025 • Terça-feira • Horário de Brasília</p>
+              <p className="text-xs text-white/80">Terça-feira • Horário de Brasília</p>
             </div>
           </div>
         </div>
