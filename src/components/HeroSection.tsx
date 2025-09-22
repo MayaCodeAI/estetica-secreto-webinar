@@ -11,7 +11,7 @@ export const HeroSection = () => {
     openModal
   } = useFormModal();
   
-  return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
+  return <section className="relative bg-black overflow-hidden">
       {/* Dr. Johnny como background centralizado com fade - APENAS MOBILE */}
       <div className="absolute inset-0 flex items-start justify-center pt-4 lg:hidden">
         <div className="relative">
@@ -28,7 +28,7 @@ export const HeroSection = () => {
       </div>
       
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60 lg:bg-none" />
+      <div className="absolute inset-0 bg-black/20 lg:bg-none" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
