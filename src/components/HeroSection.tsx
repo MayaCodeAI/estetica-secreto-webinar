@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Clock } from "lucide-react";
 import { useFormModal } from "@/hooks/useFormModal";
-// Imagens na pasta assets
-import drJohnny from "@/assets/dr-johnny.webp";
-import logoSegredos from "@/assets/logo-isolada.webp";
+// Usando caminhos diretos em vez de imports problemáticos
+const drJohnny = "/src/assets/dr-johnny.webp";
+const logoSegredos = "/src/assets/logo-isolada.webp";
 
 export const HeroSection = () => {
   const {
