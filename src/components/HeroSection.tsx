@@ -12,30 +12,28 @@ export const HeroSection = () => {
   } = useFormModal();
   
   return <section className="relative bg-gradient-to-br from-background via-background to-purple-900/20 overflow-hidden">
+      {/* Dr. Johnny como background centralizado com fade */}
+      <div className="absolute inset-0 flex items-start justify-center pt-4 lg:hidden">
+        <div className="relative">
+          <img 
+            src={drJohnny} 
+            alt="Dr. Johnny Secco" 
+            className="w-full max-w-sm object-cover opacity-100"
+            style={{
+              maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)',
+              WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)'
+            }}
+          />
+        </div>
+      </div>
+      
       {/* Background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60 lg:bg-none" />
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6 relative z-10">
-        {/* Mobile Layout - MANTIDO EXATAMENTE IGUAL */}
+        {/* Mobile Layout - EXATAMENTE COMO ESTAVA */}
         <div className="lg:hidden">
-          {/* Dr. Johnny como background centralizado com fade - MOBILE */}
-          <div className="absolute inset-0 flex items-start justify-center pt-4">
-            <div className="relative">
-              <img 
-                src={drJohnny} 
-                alt="Dr. Johnny Secco" 
-                className="w-full max-w-sm object-cover opacity-100"
-                style={{
-                  maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)',
-                  WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 40%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 85%)'
-                }}
-              />
-            </div>
-          </div>
-          
-          {/* Background overlay - MOBILE */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/60" />
-          
           {/* Logo centralizada - mais próxima da headline */}
           <div className="flex justify-center mb-2 pt-8">
             <img src={logoSegredos} alt="Segredos Comerciais da Estética" className="w-full max-w-[220px] object-contain" />
